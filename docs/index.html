@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dscribe Agent Live Demo</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">GitHub Pages Demo</p>
+          <h1>Discharge Summary Agent</h1>
+        </div>
+        <div class="toolbar" aria-label="Project links">
+          <a class="button-link primary" href="https://github.com/yashdhanani/Discharge-Summary-Agent" target="_blank" rel="noreferrer">
+            Repository
+          </a>
+          <a class="button-link" href="./data/manifest.json" target="_blank" rel="noreferrer">
+            Manifest
+          </a>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="sidebar" aria-label="Runs">
+          <div class="status-row">
+            <span id="healthDot" class="dot"></span>
+            <span id="healthText">Loading review data</span>
+          </div>
+          <div id="runList" class="run-list"></div>
+        </aside>
+
+        <section class="main-panel">
+          <div class="summary-bar">
+            <div>
+              <span class="metric-label">Evidence</span>
+              <strong id="metricEvidence">--</strong>
+            </div>
+            <div>
+              <span class="metric-label">Missing</span>
+              <strong id="metricMissing">--</strong>
+            </div>
+            <div>
+              <span class="metric-label">Meds</span>
+              <strong id="metricMeds">--</strong>
+            </div>
+            <div>
+              <span class="metric-label">Flags</span>
+              <strong id="metricFlags">--</strong>
+            </div>
+            <div>
+              <span class="metric-label">Conflicts</span>
+              <strong id="metricConflicts">--</strong>
+            </div>
+          </div>
+
+          <nav class="tabs" aria-label="Artifacts" role="tablist">
+            <button class="tab active" data-tab="draft" type="button" role="tab" aria-selected="true">Draft</button>
+            <button class="tab" data-tab="trace" type="button" role="tab" aria-selected="false">Trace</button>
+            <button class="tab" data-tab="quality" type="button" role="tab" aria-selected="false">Quality</button>
+            <button class="tab" data-tab="learning" type="button" role="tab" aria-selected="false">Learning</button>
+            <button class="tab" data-tab="structured" type="button" role="tab" aria-selected="false">JSON</button>
+          </nav>
+
+          <section id="content" class="content" aria-live="polite" role="tabpanel"></section>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

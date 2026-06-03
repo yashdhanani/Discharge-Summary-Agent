@@ -1,0 +1,122 @@
+{
+  "reward_signal": "1 - normalized edit burden using SequenceMatcher ratio between draft and simulated doctor edit.",
+  "mechanism": "epsilon-greedy contextual bandit over discharge-summary rendering strategies.",
+  "best_strategy": "safety_first",
+  "before_edit_burden": 0.0798,
+  "after_edit_burden": 0.0639,
+  "curve": [
+    {
+      "iteration": 1,
+      "strategy": "verbose",
+      "edit_burden": 0.0798,
+      "reward": 0.9202
+    },
+    {
+      "iteration": 2,
+      "strategy": "concise",
+      "edit_burden": 0.1733,
+      "reward": 0.8267
+    },
+    {
+      "iteration": 3,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 4,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 5,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 6,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 7,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 8,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 9,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 10,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 11,
+      "strategy": "concise",
+      "edit_burden": 0.1733,
+      "reward": 0.8267
+    },
+    {
+      "iteration": 12,
+      "strategy": "verbose",
+      "edit_burden": 0.0798,
+      "reward": 0.9202
+    },
+    {
+      "iteration": 13,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 14,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 15,
+      "strategy": "verbose",
+      "edit_burden": 0.0798,
+      "reward": 0.9202
+    },
+    {
+      "iteration": 16,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 17,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    },
+    {
+      "iteration": 18,
+      "strategy": "safety_first",
+      "edit_burden": 0.0639,
+      "reward": 0.9361
+    }
+  ],
+  "limitations": [
+    "The reviewer is simulated, so improvements measure consistency with a hidden style policy rather than clinical truth.",
+    "The learning loop never changes extracted facts; it only changes rendering style, preserving no-fabrication safeguards.",
+    "Real deployment would require clinician-labeled held-out charts and safety metrics beyond edit distance."
+  ]
+}

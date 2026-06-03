@@ -2,6 +2,14 @@
 
 Safe local agent for turning messy clinical source-note PDFs into a structured discharge-summary draft for clinician review. The implementation is intentionally conservative: if a clinical fact is not supported by source text, the draft says `MISSING`, `uncertain`, or `CLINICIAN_REVIEW` instead of guessing.
 
+## Live Demo
+
+Review the generated dashboard on GitHub Pages:
+
+[https://yashdhanani.github.io/Discharge-Summary-Agent/](https://yashdhanani.github.io/Discharge-Summary-Agent/)
+
+The GitHub Pages demo is a static review build of the generated artifacts. The real agent loop, PDF ingestion, OCR fallback, backend API, and ability to process new PDFs run locally with the commands below.
+
 ## What To Review
 
 - `outputs/discharge_summary_draft.md` - draft generated from the provided patient source-note PDF.
@@ -11,6 +19,7 @@ Safe local agent for turning messy clinical source-note PDFs into a structured d
 - `outputs_demo/` - two synthetic demo patients for the required video walkthrough.
 - `ocr_cache/` - local OCR text cache retained for reproducible reruns and scanned-PDF fallback.
 - `web/` - frontend dashboard served by the local backend.
+- `docs/` - static GitHub Pages dashboard generated from the current output artifacts.
 - `tests/test_agent_safety.py` - safety regression tests.
 - `SUBMISSION_CHECKLIST.md` - requirement-by-requirement mapping for reviewers and video prep.
 - `DEMO_AND_INTERVIEW_GUIDE.md` - 3-5 minute video script and interview talking points.

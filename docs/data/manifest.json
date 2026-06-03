@@ -1,0 +1,219 @@
+{
+  "project": "Dscribe Discharge Summary Agent",
+  "repo_url": "https://github.com/yashdhanani/Discharge-Summary-Agent",
+  "pages_url": "https://yashdhanani.github.io/Discharge-Summary-Agent/",
+  "generated_at": "2026-06-03T03:55:53.603862+00:00",
+  "runs": [
+    {
+      "id": "provided",
+      "label": "Provided patient source notes",
+      "status": "ready",
+      "artifacts": {
+        "draft": "data/runs/provided/discharge_summary_draft.md",
+        "trace": "data/runs/provided/trace.json",
+        "quality": "data/runs/provided/quality_report.json",
+        "quality_md": "data/runs/provided/quality_report.md",
+        "structured": "data/runs/provided/structured_summary.json",
+        "learning": "data/runs/provided/learning_metrics.json"
+      },
+      "summary": {
+        "evidence_coverage": 0.7,
+        "missing_fields": 3,
+        "clinician_review_flags": 15,
+        "conflicts": 1,
+        "discharge_meds": 8
+      },
+      "quality": {
+        "patient_pages_read": 38,
+        "extracted_characters": 25421,
+        "agent_steps": 9,
+        "step_cap_respected": true,
+        "required_fields": {
+          "total": 10,
+          "missing": [
+            "patient_demographics",
+            "admission_date",
+            "discharge_date"
+          ],
+          "uncertain": [
+            "allergies"
+          ],
+          "evidence_backed": [
+            "principal_diagnosis",
+            "secondary_diagnoses",
+            "hospital_course",
+            "procedures",
+            "allergies",
+            "follow_up_instructions",
+            "discharge_condition"
+          ],
+          "evidence_coverage": 0.7
+        },
+        "medications": {
+          "discharge_count": 8,
+          "admission_or_inpatient_count": 0,
+          "reconciliation_rows": 8,
+          "reconciliation_alerts": 8
+        },
+        "pending_results_count": 1,
+        "conflicts_count": 1,
+        "safety_alerts_count": 7,
+        "clinician_review_flags": [
+          "CLINICIAN_REVIEW: Medication reconciliation: EMESET - Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: ENTERO - Dose not reliably sourced.; Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: LOPIRAMIDE - Dose not reliably sourced.; Frequency not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: MEFTAL SPAS - Dose not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: METRONIDAZOLE-LIKE - Dose not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: OFLOX TZ - Dose not reliably sourced.; Frequency not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: RACIPER - Dose not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: ZIDORR - Dose not reliably sourced.; Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Metronidazole-like medication found; confirm alcohol avoidance counseling and indication.",
+          "CLINICIAN_REVIEW: Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+          "CLINICIAN_REVIEW: Potential QT/CNS safety concern: quinolone antibiotic plus loperamide-like antidiarrheal; clinician review recommended.",
+          "CLINICIAN_REVIEW: admission_date is missing or uncertain.",
+          "CLINICIAN_REVIEW: allergies is missing or uncertain.",
+          "CLINICIAN_REVIEW: discharge_date is missing or uncertain.",
+          "CLINICIAN_REVIEW: patient_demographics is missing or uncertain."
+        ]
+      },
+      "learning": {
+        "before_edit_burden": 0.0798,
+        "after_edit_burden": 0.0639,
+        "best_strategy": "safety_first"
+      }
+    },
+    {
+      "id": "patient-a-clean",
+      "label": "Demo: patient a clean",
+      "status": "ready",
+      "artifacts": {
+        "draft": "data/runs/patient-a-clean/discharge_summary_draft.md",
+        "trace": "data/runs/patient-a-clean/trace.json",
+        "quality": "data/runs/patient-a-clean/quality_report.json",
+        "quality_md": "data/runs/patient-a-clean/quality_report.md",
+        "structured": "data/runs/patient-a-clean/structured_summary.json",
+        "learning": "data/runs/patient-a-clean/learning_metrics.json"
+      },
+      "summary": {
+        "evidence_coverage": 1.0,
+        "missing_fields": 0,
+        "clinician_review_flags": 2,
+        "conflicts": 0,
+        "discharge_meds": 4
+      },
+      "quality": {
+        "patient_pages_read": 1,
+        "extracted_characters": 968,
+        "agent_steps": 9,
+        "step_cap_respected": true,
+        "required_fields": {
+          "total": 10,
+          "missing": [],
+          "uncertain": [],
+          "evidence_backed": [
+            "patient_demographics",
+            "admission_date",
+            "discharge_date",
+            "principal_diagnosis",
+            "secondary_diagnoses",
+            "hospital_course",
+            "procedures",
+            "allergies",
+            "follow_up_instructions",
+            "discharge_condition"
+          ],
+          "evidence_coverage": 1.0
+        },
+        "medications": {
+          "discharge_count": 4,
+          "admission_or_inpatient_count": 2,
+          "reconciliation_rows": 4,
+          "reconciliation_alerts": 2
+        },
+        "pending_results_count": 1,
+        "conflicts_count": 0,
+        "safety_alerts_count": 0,
+        "clinician_review_flags": [
+          "CLINICIAN_REVIEW: Medication reconciliation: AMOXICILLIN - No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: PANTOPRAZOLE - No clear matching admission medication found; reconcile indication/reason."
+        ]
+      },
+      "learning": {
+        "before_edit_burden": 0.0154,
+        "after_edit_burden": 0.0136,
+        "best_strategy": "safety_first"
+      }
+    },
+    {
+      "id": "patient-b-conflict-pending",
+      "label": "Demo: patient b conflict pending",
+      "status": "ready",
+      "artifacts": {
+        "draft": "data/runs/patient-b-conflict-pending/discharge_summary_draft.md",
+        "trace": "data/runs/patient-b-conflict-pending/trace.json",
+        "quality": "data/runs/patient-b-conflict-pending/quality_report.json",
+        "quality_md": "data/runs/patient-b-conflict-pending/quality_report.md",
+        "structured": "data/runs/patient-b-conflict-pending/structured_summary.json",
+        "learning": "data/runs/patient-b-conflict-pending/learning_metrics.json"
+      },
+      "summary": {
+        "evidence_coverage": 0.7,
+        "missing_fields": 3,
+        "clinician_review_flags": 10,
+        "conflicts": 1,
+        "discharge_meds": 3
+      },
+      "quality": {
+        "patient_pages_read": 1,
+        "extracted_characters": 1104,
+        "agent_steps": 9,
+        "step_cap_respected": true,
+        "required_fields": {
+          "total": 10,
+          "missing": [
+            "discharge_date",
+            "procedures",
+            "allergies"
+          ],
+          "uncertain": [],
+          "evidence_backed": [
+            "patient_demographics",
+            "admission_date",
+            "principal_diagnosis",
+            "secondary_diagnoses",
+            "hospital_course",
+            "follow_up_instructions",
+            "discharge_condition"
+          ],
+          "evidence_coverage": 0.7
+        },
+        "medications": {
+          "discharge_count": 3,
+          "admission_or_inpatient_count": 1,
+          "reconciliation_rows": 4,
+          "reconciliation_alerts": 4
+        },
+        "pending_results_count": 2,
+        "conflicts_count": 1,
+        "safety_alerts_count": 6,
+        "clinician_review_flags": [
+          "CLINICIAN_REVIEW: Medication reconciliation: LOPERAMIDE - No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: METRONIDAZOLE - No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: OFLOX TZ - Dose not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+          "CLINICIAN_REVIEW: Medication reconciliation: THYROXINE - Medication appears in admission/inpatient source but not discharge list; clinician reconciliation required.",
+          "CLINICIAN_REVIEW: Metronidazole-like medication found; confirm alcohol avoidance counseling and indication.",
+          "CLINICIAN_REVIEW: Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+          "CLINICIAN_REVIEW: Potential QT/CNS safety concern: quinolone antibiotic plus loperamide-like antidiarrheal; clinician review recommended.",
+          "CLINICIAN_REVIEW: allergies is missing or uncertain.",
+          "CLINICIAN_REVIEW: discharge_date is missing or uncertain.",
+          "CLINICIAN_REVIEW: procedures is missing or uncertain."
+        ]
+      },
+      "learning": {
+        "before_edit_burden": 0.0117,
+        "after_edit_burden": 0.0022,
+        "best_strategy": "safety_first"
+      }
+    }
+  ]
+}

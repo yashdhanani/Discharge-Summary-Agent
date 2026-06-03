@@ -11,6 +11,7 @@ The project covers:
 - Part 1 required agent: PDF ingestion, bounded agent loop, tool use, trace logging, missing-data handling, medication reconciliation, conflict detection, and no-fabrication checks.
 - Part 2 optional stretch: simulated doctor edits, edit-distance reward, epsilon-greedy strategy selection, and before/after learning metrics.
 - Full local web dashboard: frontend plus backend for viewing generated draft, trace, quality report, learning metrics, and structured JSON.
+- GitHub Pages review dashboard: static live view of the generated artifacts for direct repo-based review.
 
 ## Folder Layout
 
@@ -43,6 +44,15 @@ home assignment/
 |   |-- styles.css
 |   |-- app.js
 |   `-- favicon.svg
+|-- docs/
+|   |-- index.html
+|   |-- styles.css
+|   |-- app.js
+|   |-- favicon.svg
+|   `-- data/
+|-- .github/
+|   `-- workflows/
+|       `-- pages.yml
 |-- demo_patients/
 |   |-- patient-a-clean/
 |   |   |-- source_notes.txt
@@ -52,6 +62,7 @@ home assignment/
 |       `-- source_notes.pdf
 |-- scripts/
 |   |-- make_synthetic_patients.py
+|   |-- build_static_site.py
 |   `-- validate_submission.py
 |-- tests/
 |   `-- test_agent_safety.py
@@ -247,6 +258,24 @@ Defines the dashboard shell:
 - artifact tabs
 - content area
 - toast notifications
+
+## GitHub Pages Frontend
+
+### `docs/index.html`
+
+Static live-review dashboard deployed from GitHub Pages at:
+
+```text
+https://yashdhanani.github.io/Discharge-Summary-Agent/
+```
+
+It renders the generated artifacts in `docs/data/` so reviewers can inspect the draft, trace, quality report, learning metrics, and structured JSON directly from the repository URL.
+
+### `scripts/build_static_site.py`
+
+Builds the static Pages data bundle from `outputs/` and `outputs_demo/`.
+
+The Pages dashboard is intentionally read-only. It does not replace the local backend; processing a new PDF still uses the CLI or `src/dscribe_agent/web_app.py`.
 
 ### `web/styles.css`
 
