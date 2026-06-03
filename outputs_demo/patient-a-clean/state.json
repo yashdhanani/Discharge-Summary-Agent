@@ -1,0 +1,547 @@
+{
+  "pages": [
+    {
+      "source": "source_notes.pdf",
+      "page": 1,
+      "text": "Patient: Maya Rao, 54-year-old female\nAdmission Date: 2026-01-10\nDischarge Date: 2026-01-13\nPrincipal Diagnosis: Community acquired pneumonia\nSecondary Diagnoses: Type 2 diabetes mellitus; hypertension\nAllergies: No known drug allergies\nHospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray\nshowed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and\nbronchodilator support. Oxygen requirement resolved by discharge.\nProcedures: Chest X-ray; IV cannulization\nAdmission Medications: Metformin 500MG BD; Amlodipine 5MG OD\nAdvice on Discharge:\nTAB AMOXICILLIN 500MG TDS 5 DAYS\nTAB METFORMIN 500MG BD 30 DAYS\nTAB AMLODIPINE 5MG OD 30 DAYS\nTAB PANTOPRAZOLE 40MG OD 7 DAYS\nFollow-up Instructions: Review with physician in 7 days. Return earlier for fever,\nbreathlessness, chest pain, or persistent vomiting.\nPending Results: None documented.\nDischarge Condition: Hemodynamically stable, maintaining saturation on room air."
+    }
+  ],
+  "summary": {
+    "patient_demographics": {
+      "value": "Maya Rao, 54-year-old female",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Patient: Maya Rao, 54-year-old female"
+        }
+      ],
+      "flags": []
+    },
+    "admission_date": {
+      "value": "2026-01-10",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Date: 2026-01-10"
+        }
+      ],
+      "flags": []
+    },
+    "discharge_date": {
+      "value": "2026-01-13",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Discharge Date: 2026-01-13"
+        }
+      ],
+      "flags": []
+    },
+    "principal_diagnosis": {
+      "value": "Community-acquired pneumonia",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Community-acquired pneumonia"
+        }
+      ],
+      "flags": []
+    },
+    "secondary_diagnoses": {
+      "value": [
+        {
+          "value": "Type 2 diabetes mellitus",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Type 2 diabetes mellitus"
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "Hypertension",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Hypertension"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Type 2 diabetes mellitus"
+        },
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Hypertension"
+        }
+      ],
+      "flags": []
+    },
+    "hospital_course": {
+      "value": "Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV cannulization Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV cannulization Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": []
+    },
+    "procedures": {
+      "value": [
+        {
+          "value": "IV Cannulization",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Patient: Maya Rao, 54-year-old female Admission Date: 2026-01-10 Discharge Date: 2026-01-13 Principal Diagnosis: Community acquired pneumonia Secondary Diagnoses: Type 2 diabetes mellitus; hypertension Allergies: No known drug allergies Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV can"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [],
+      "flags": []
+    },
+    "allergies": {
+      "value": "No known drug allergies documented",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Patient: Maya Rao, 54-year-old female Admission Date: 2026-01-10 Discharge Date: 2026-01-13 Principal Diagnosis: Community acquired pneumonia Secondary Diagnoses: Type 2 diabetes mellitus; hypertension Allergies: No known drug allergies Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV can"
+        }
+      ],
+      "flags": []
+    },
+    "follow_up_instructions": {
+      "value": "Follow-up Instructions: Review with physician in 7 days. Return earlier for fever, breathlessness, chest pain, or persistent vomiting.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Follow-up Instructions: Review with physician in 7 days. Return earlier for fever, breathlessness, chest pain, or persistent vomiting."
+        }
+      ],
+      "flags": []
+    },
+    "discharge_condition": {
+      "value": "Hemodynamically stable, maintaining saturation on room air.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Discharge Condition: Hemodynamically stable, maintaining saturation on room air."
+        }
+      ],
+      "flags": []
+    }
+  },
+  "discharge_meds": [
+    {
+      "name": "AMOXICILLIN",
+      "dose": "500MG",
+      "frequency": "TDS",
+      "duration": "5 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB AMOXICILLIN 500MG TDS 5 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "METFORMIN",
+      "dose": "500MG",
+      "frequency": "BD",
+      "duration": "30 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB METFORMIN 500MG BD 30 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "AMLODIPINE",
+      "dose": "5MG",
+      "frequency": "OD",
+      "duration": "30 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB AMLODIPINE 5MG OD 30 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "PANTOPRAZOLE",
+      "dose": "40MG",
+      "frequency": "OD",
+      "duration": "7 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB PANTOPRAZOLE 40MG OD 7 DAYS"
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "admission_meds": [
+    {
+      "name": "METFORMIN",
+      "dose": "500MG",
+      "frequency": "BD",
+      "duration": "MISSING",
+      "source": "admission",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": [
+        "Admission medication duration usually not documented; compare name/dose/frequency only."
+      ]
+    },
+    {
+      "name": "AMLODIPINE",
+      "dose": "5MG",
+      "frequency": "OD",
+      "duration": "MISSING",
+      "source": "admission",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": [
+        "Admission medication duration usually not documented; compare name/dose/frequency only."
+      ]
+    }
+  ],
+  "med_reconciliation": [
+    {
+      "medication": "AMOXICILLIN",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "METFORMIN",
+      "status": "continued/changed",
+      "matched_admission_med": "METFORMIN",
+      "flags": []
+    },
+    {
+      "medication": "AMLODIPINE",
+      "status": "continued/changed",
+      "matched_admission_med": "AMLODIPINE",
+      "flags": []
+    },
+    {
+      "medication": "PANTOPRAZOLE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    }
+  ],
+  "pending_results": [
+    {
+      "value": "None documented.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Pending Results: None documented."
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "conflicts": [],
+  "escalations": [
+    "CLINICIAN_REVIEW: Medication reconciliation: AMOXICILLIN - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: PANTOPRAZOLE - No clear matching admission medication found; reconcile indication/reason."
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "reasoning": "Need source text before any clinical extraction; sparse PDFs require fallback rather than silent failure.",
+      "tool_or_action": "ingest_pdfs",
+      "inputs": {
+        "input_path": "/Users/yash/Desktop/home assignment/demo_patients/patient-a-clean"
+      },
+      "result": "Read 1 PDF(s), 1 page(s), 968 extracted characters.",
+      "next_decision": "Continue to extract_summary_fields."
+    },
+    {
+      "step": 2,
+      "reasoning": "Required discharge-summary sections must be filled only from sourced evidence.",
+      "tool_or_action": "extract_summary_fields",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": []
+      },
+      "result": "Extracted 10 summary fields; 0 need review.",
+      "next_decision": "Continue to extract_pending_results."
+    },
+    {
+      "step": 3,
+      "reasoning": "Pending/missing data must be explicit and visible to the reviewer.",
+      "tool_or_action": "extract_pending_results",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": []
+      },
+      "result": "Found 1 pending/missing result mention(s).",
+      "next_decision": "Continue to extract_medications."
+    },
+    {
+      "step": 4,
+      "reasoning": "Medication reconciliation requires separate admission/inpatient and discharge lists.",
+      "tool_or_action": "extract_medications",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "Extracted 4 discharge meds and 2 admission/inpatient meds.",
+      "next_decision": "Continue to reconcile_medications."
+    },
+    {
+      "step": 5,
+      "reasoning": "Medication additions, stops, and unclear changes are safety-critical.",
+      "tool_or_action": "reconcile_medications",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "Medication reconciliation produced 4 rows; 2 flagged.",
+      "next_decision": "Continue to detect_conflicts."
+    },
+    {
+      "step": 6,
+      "reasoning": "Contradictory diagnoses or results should be surfaced, not arbitrarily resolved.",
+      "tool_or_action": "detect_conflicts",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "Detected 0 potential conflict(s).",
+      "next_decision": "Continue to run_safety_tools because discharge medications were extracted."
+    },
+    {
+      "step": 7,
+      "reasoning": "Medication safety checks are tool calls that the agent should choose when meds exist.",
+      "tool_or_action": "run_safety_tools",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "Drug-interaction mock returned 0 alert(s).",
+      "next_decision": "Continue to validate_no_fabrication."
+    },
+    {
+      "step": 8,
+      "reasoning": "Before rendering, supported facts must have evidence or be downgraded.",
+      "tool_or_action": "validate_no_fabrication",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "No-fabrication guardrail checked 10 fields; downgraded 0.",
+      "next_decision": "Continue to render_draft."
+    },
+    {
+      "step": 9,
+      "reasoning": "All checks are complete; produce a clinician-review draft.",
+      "tool_or_action": "render_draft",
+      "inputs": {
+        "pages": 1,
+        "summary_fields": [
+          "patient_demographics",
+          "admission_date",
+          "discharge_date",
+          "principal_diagnosis",
+          "secondary_diagnoses",
+          "hospital_course",
+          "procedures",
+          "allergies",
+          "follow_up_instructions",
+          "discharge_condition"
+        ],
+        "discharge_meds": [
+          "AMOXICILLIN",
+          "METFORMIN",
+          "AMLODIPINE",
+          "PANTOPRAZOLE"
+        ]
+      },
+      "result": "Draft can be rendered from supported fields and explicit flags.",
+      "next_decision": "Stop: planned checks complete."
+    }
+  ]
+}

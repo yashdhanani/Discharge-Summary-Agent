@@ -1,0 +1,17 @@
+.DS_Store
+.venv/
+.env
+.env.*
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+node_modules/
+.verify-venv/
+.verify_outputs/

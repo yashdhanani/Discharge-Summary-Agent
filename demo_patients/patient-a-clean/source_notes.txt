@@ -1,0 +1,17 @@
+Patient: Maya Rao, 54-year-old female
+Admission Date: 2026-01-10
+Discharge Date: 2026-01-13
+Principal Diagnosis: Community acquired pneumonia
+Secondary Diagnoses: Type 2 diabetes mellitus; hypertension
+Allergies: No known drug allergies
+Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge.
+Procedures: Chest X-ray; IV cannulization
+Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD
+Advice on Discharge:
+TAB AMOXICILLIN 500MG TDS 5 DAYS
+TAB METFORMIN 500MG BD 30 DAYS
+TAB AMLODIPINE 5MG OD 30 DAYS
+TAB PANTOPRAZOLE 40MG OD 7 DAYS
+Follow-up Instructions: Review with physician in 7 days. Return earlier for fever, breathlessness, chest pain, or persistent vomiting.
+Pending Results: None documented.
+Discharge Condition: Hemodynamically stable, maintaining saturation on room air.

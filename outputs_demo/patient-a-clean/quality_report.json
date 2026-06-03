@@ -1,0 +1,37 @@
+{
+  "patient_pages_read": 1,
+  "extracted_characters": 968,
+  "agent_steps": 9,
+  "step_cap_respected": true,
+  "required_fields": {
+    "total": 10,
+    "missing": [],
+    "uncertain": [],
+    "evidence_backed": [
+      "patient_demographics",
+      "admission_date",
+      "discharge_date",
+      "principal_diagnosis",
+      "secondary_diagnoses",
+      "hospital_course",
+      "procedures",
+      "allergies",
+      "follow_up_instructions",
+      "discharge_condition"
+    ],
+    "evidence_coverage": 1.0
+  },
+  "medications": {
+    "discharge_count": 4,
+    "admission_or_inpatient_count": 2,
+    "reconciliation_rows": 4,
+    "reconciliation_alerts": 2
+  },
+  "pending_results_count": 1,
+  "conflicts_count": 0,
+  "safety_alerts_count": 0,
+  "clinician_review_flags": [
+    "CLINICIAN_REVIEW: Medication reconciliation: AMOXICILLIN - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: PANTOPRAZOLE - No clear matching admission medication found; reconcile indication/reason."
+  ]
+}

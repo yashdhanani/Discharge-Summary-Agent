@@ -1,0 +1,15 @@
+Patient: Nisha Patel, 38-year-old female
+Admission Date: 2026-02-04
+Principal Diagnosis: Acute gastroenteritis with dehydration
+Progress Note: Assessment lists urinary tract infection after urine routine showed pyuria. This conflicts with the admission diagnosis and should be flagged rather than merged silently.
+Secondary Diagnoses: Acute kidney injury, improved
+Allergies: Unknown
+Hospital Course: Patient presented with loose stools, vomiting, fever, and dysuria. Initial creatinine was elevated and improved after IV fluids. Urine culture and sensitivity was sent; report awaited at discharge.
+Admission Medications: Thyroxine 50MCG OD
+Advice on Discharge:
+TAB OFLOX TZ 1-0-1 5 DAYS
+TAB LOPERAMIDE 2MG SOS 3 DAYS
+TAB METRONIDAZOLE 400MG TDS 5 DAYS
+Follow-up Instructions: Review immediately for fever, worsening loose stools, vomiting, fatigue, reduced urine output, or abdominal pain. Review urine culture when available.
+Pending Results: Urine culture and sensitivity report awaited.
+Discharge Condition: Stable at request discharge, but final discharge date was not documented in the source note.

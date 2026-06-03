@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dscribe-discharge-agent"
+version = "0.2.0"
+description = "Safe local discharge-summary agent for messy clinical source-note PDFs."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pypdf>=4.0.0"]
+
+[project.scripts]
+dscribe-agent = "dscribe_agent.cli:main"
+dscribe-web = "dscribe_agent.web_app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

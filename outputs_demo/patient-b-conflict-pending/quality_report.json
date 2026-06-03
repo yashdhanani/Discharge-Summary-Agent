@@ -1,0 +1,46 @@
+{
+  "patient_pages_read": 1,
+  "extracted_characters": 1104,
+  "agent_steps": 9,
+  "step_cap_respected": true,
+  "required_fields": {
+    "total": 10,
+    "missing": [
+      "discharge_date",
+      "procedures",
+      "allergies"
+    ],
+    "uncertain": [],
+    "evidence_backed": [
+      "patient_demographics",
+      "admission_date",
+      "principal_diagnosis",
+      "secondary_diagnoses",
+      "hospital_course",
+      "follow_up_instructions",
+      "discharge_condition"
+    ],
+    "evidence_coverage": 0.7
+  },
+  "medications": {
+    "discharge_count": 3,
+    "admission_or_inpatient_count": 1,
+    "reconciliation_rows": 4,
+    "reconciliation_alerts": 4
+  },
+  "pending_results_count": 2,
+  "conflicts_count": 1,
+  "safety_alerts_count": 6,
+  "clinician_review_flags": [
+    "CLINICIAN_REVIEW: Medication reconciliation: LOPERAMIDE - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: METRONIDAZOLE - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: OFLOX TZ - Dose not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: THYROXINE - Medication appears in admission/inpatient source but not discharge list; clinician reconciliation required.",
+    "CLINICIAN_REVIEW: Metronidazole-like medication found; confirm alcohol avoidance counseling and indication.",
+    "CLINICIAN_REVIEW: Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+    "CLINICIAN_REVIEW: Potential QT/CNS safety concern: quinolone antibiotic plus loperamide-like antidiarrheal; clinician review recommended.",
+    "CLINICIAN_REVIEW: allergies is missing or uncertain.",
+    "CLINICIAN_REVIEW: discharge_date is missing or uncertain.",
+    "CLINICIAN_REVIEW: procedures is missing or uncertain."
+  ]
+}

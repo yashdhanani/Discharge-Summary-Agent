@@ -1,0 +1,424 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2513 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+14 TL
+(Take-Home Assignment: Agentic AIfor Discharge Summaries) Tj
+T*
+(Role: AI Engineer Time: Up to one full working day. We expect ~6?10 focused hours; you) Tj
+T*
+(have a) Tj
+T*
+(48-hour window from receipt to submit, so you can pick your day. AI assistants: Allowed) Tj
+T*
+(and) Tj
+T*
+(encouraged ? but you must understand and be able to explain every line of what you) Tj
+T*
+(submit.) Tj
+T*
+() Tj
+T*
+(Overview) Tj
+T*
+(You will build an agentic AI system that reads a patient's raw source notes and produces) Tj
+T*
+(a) Tj
+T*
+(structured, clinically safe discharge summary draft for clinician review. Source) Tj
+T*
+(documents are) Tj
+T*
+(messy and incomplete, exactly as in the real world ? so the system must plan, decide) Tj
+T*
+(which) Tj
+T*
+(information it needs, recover when things are missing or contradictory, and know when) Tj
+T*
+(not to act) Tj
+T*
+(on its own.) Tj
+T*
+(This is not a single LLM call. We are evaluating how you design an agent: planning, tool) Tj
+T*
+(use,) Tj
+T*
+(robustness, control, and ? above all in a clinical setting ? its refusal to invent) Tj
+T*
+(facts.) Tj
+T*
+(The assignment has two parts. Part 1 is the bar. Part 2 is a stretch that distinguishes) Tj
+T*
+(the) Tj
+T*
+(strongest submissions. A strong Part 1 alone is a valid, complete submission.) Tj
+T*
+() Tj
+T*
+(The Data) Tj
+T*
+(You will receive a set of patients. For each patient you get a folder of source-note) Tj
+T*
+(PDFs, which) Tj
+T*
+(may include:) Tj
+T*
+(Admission note) Tj
+T*
+(Progress notes \(one or more\)) Tj
+T*
+(Laboratory results) Tj
+T*
+(Medication records \(admission and discharge\)) Tj
+T*
+(The documents are intentionally realistic: some are verbose, some are incomplete, some) Tj
+T*
+(contain) Tj
+T*
+(results that are still pending, some contain medication changes with no stated reason,) Tj
+T*
+(and) Tj
+T*
+(some contain information that conflicts between notes. Reading and making sense of these) Tj
+T*
+(PDFs is part of the task.) Tj
+T*
+(All data provided is synthetic. Do not upload it to any third-party service that would) Tj
+T*
+(retain it,) Tj
+T*
+(and do not submit any real patient data of your own.) Tj
+T*
+() Tj
+T*
+(Part 1 ? The Discharge SummaryAgent \(required\)) Tj
+T*
+() Tj
+T*
+(Build an agent that, given a patient's source-note PDFs, produces a structured) Tj
+T*
+(discharge-) Tj
+T*
+(summary draft for clinician review.) Tj
+T*
+() Tj
+T*
+(Required sections of the output) Tj
+T*
+(Patient demographics · admission & discharge dates · principal and secondary diagnoses ·) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 3055 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+14 TL
+(hospital course · procedures · discharge medications with changes from admission clearly) Tj
+T*
+(noted · allergies · follow-up instructions · pending results · discharge condition.) Tj
+T*
+(Hard requirements) Tj
+T*
+(1. A real agent loop. The system must plan and re-plan based on what it reads and what) Tj
+T*
+(tools) Tj
+T*
+(return ? not a fixed, hardcoded pipeline.) Tj
+T*
+(2. PDF ingestion. Read and extract the relevant content from the source PDFs yourself.) Tj
+T*
+(3. No fabrication ? the core guardrail. The agent must never invent or guess a clinical) Tj
+T*
+(fact.) Tj
+T*
+(Any required field it cannot source from the documents must be explicitly marked missing) Tj
+T*
+(or pending and flagged for clinician review. The output is always a draft for review,) Tj
+T*
+(never) Tj
+T*
+(an auto-finalized clinical document.) Tj
+T*
+(4. Handle pending / missing data. If a lab is pending or a note is absent, say so ? do) Tj
+T*
+(not fill in) Tj
+T*
+(a plausible value.) Tj
+T*
+(5. Medication reconciliation. Compare admission vs. discharge medications and surface) Tj
+T*
+(changes. If a medication was added, stopped, or changed with no documented reason, flag) Tj
+T*
+(it for reconciliation rather than silently resolving it.) Tj
+T*
+(6. Handle conflicting information. If two notes disagree \(e.g., different discharge) Tj
+T*
+(diagnoses\),) Tj
+T*
+(flag the conflict ? do not arbitrarily pick one.) Tj
+T*
+(7. Use tools, and decide when. You may mock external tools where needed \(for example a) Tj
+T*
+(drug-interaction lookup and an escalation/"flag for clinician review" action\). The agent) Tj
+T*
+(must decide when to call them. If an interaction or safety concern is found, it must be) Tj
+T*
+(surfaced and escalated, not buried.) Tj
+T*
+(8. Robust failure handling. Tools and document reads can fail, time out, or return) Tj
+T*
+(empty. The) Tj
+T*
+(agent must retry, fall back, or report ? never crash, and never behave as if a failed) Tj
+T*
+(call) Tj
+T*
+(succeeded.) Tj
+T*
+(9. Control. Enforce a hard step/iteration cap so the agent cannot run forever.) Tj
+T*
+(10. Observability. Emit a readable trace for each step: reasoning ? tool/action chosen ?) Tj
+T*
+(inputs) Tj
+T*
+(? result ? next decision.) Tj
+T*
+() Tj
+T*
+(Part 2 ? Learning from Doctor Edits \(stretch\)) Tj
+T*
+(In production, a clinician edits the agent's draft before finalizing. Those edits are) Tj
+T*
+(signal: the) Tj
+T*
+(system should learn from them so future drafts need fewer corrections and become more) Tj
+T*
+(accurate over time.) Tj
+T*
+(We do not have real doctor-edited data ? so part of the challenge is manufacturing the) Tj
+T*
+(feedback) Tj
+T*
+(loop yourself and proving it works.) Tj
+T*
+(You must:) Tj
+T*
+() Tj
+T*
+(1. Define a reward / accuracy signal derived from edits ? e.g., section-level match rate) Tj
+T*
+(or) Tj
+T*
+(normalized edit distance between the agent's draft and the corrected version \(less) Tj
+T*
+(editing =) Tj
+T*
+(higher reward\).) Tj
+T*
+(2. Create a way to generate edit signal. Build a simulated reviewer: a stand-in "doctor") Tj
+T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 3004 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+14 TL
+(that) Tj
+T*
+(applies a consistent \(and, to the agent, hidden\) editing policy to drafts, producing) Tj
+T*
+(\(draft,) Tj
+T*
+(edited\) pairs. This lets you train and measure without real clinicians in the loop.) Tj
+T*
+(3. Implement a learning mechanism that uses accumulated edits to improve future drafts.) Tj
+T*
+(Choose your approach and justify it ? for example a contextual bandit over) Tj
+T*
+(prompt/template strategies rewarded by reduced edit burden, preference fine-tuning) Tj
+T*
+(\(DPO/SFT\) on the pairs, a learned reward model with best-of-N selection, or a structured) Tj
+T*
+(correction-memory injected into future prompts.) Tj
+T*
+(4. Show measurable improvement. Report a before/after metric \(e.g., average edit) Tj
+T*
+(distance or) Tj
+T*
+(section accuracy\) on a held-out set, with an improvement curve over iterations.) Tj
+T*
+(5. Discuss the limitations. Address the cold-start / limited-data problem, and the risk) Tj
+T*
+(that) Tj
+T*
+(optimizing to reduce edits can be gamed ? an agent can lower edit distance by becoming) Tj
+T*
+(vaguer or mimicking style rather than getting the medicine right. Explain how you keep) Tj
+T*
+(the) Tj
+T*
+(learning loop from degrading the Part 1 safety guarantees.) Tj
+T*
+(A clean, well-measured method that demonstrably lowers edit burden beats a sophisticated) Tj
+T*
+(method that doesn't run or isn't evaluated.) Tj
+T*
+() Tj
+T*
+(Required: Working Video Demo) Tj
+T*
+(Record a 3?5 minute screen recording \(e.g., Loom\) in which you:) Tj
+T*
+(Run the agent live on at least two patients, including one with missing/pending data or) Tj
+T*
+(a) Tj
+T*
+(conflict.) Tj
+T*
+(Walk through a step trace and point out a moment where the agent chose to flag or) Tj
+T*
+(escalate) Tj
+T*
+(rather than guess.) Tj
+T*
+(If you attempted Part 2, show the before/after improvement.) Tj
+T*
+(The video is required and doubles as proof the system runs.) Tj
+T*
+() Tj
+T*
+(What to Submit) Tj
+T*
+(1. Source code in a repo \(GitHub link or zip\) with clear run instructions.) Tj
+T*
+(2. Generated discharge-summary drafts and step traces for every patient in the provided) Tj
+T*
+(set.) Tj
+T*
+(3. For Part 2 \(if attempted\): the simulated reviewer, the learning mechanism, and the) Tj
+T*
+(before/after metric + curve.) Tj
+T*
+(4. The video demo \(link\).) Tj
+T*
+() Tj
+T*
+(5. A short README \(1?2 pages\) covering: your agent's loop design, how you enforce the) Tj
+T*
+(no-) Tj
+T*
+(fabrication guardrail, how you handle failures and conflicts, your Part 2 reward design) Tj
+T*
+(and) Tj
+T*
+() Tj
+T*
+(results, the limitations of your approach, and what you would do with more time.) Tj
+T*
+() Tj
+T*
+(Rules & Constraints) Tj
+T*
+(Time-box to roughly one working day; submit within the 48-hour window.) Tj
+T*
+(Any LLM provider is fine. Keep API keys out of the repo.) Tj
+T*
+(AI coding assistants are allowed; you must be able to explain everything you submit.) Tj
+T*
+(Frameworks \(LangGraph, CrewAI, etc.\) are permitted, but a clear from-scratch agent loop) Tj
+T*
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 857 >>
+stream
+BT
+/F1 10 Tf
+50 750 Td
+14 TL
+(is slightly preferred and you should be able to justify every decision the agent makes.) Tj
+T*
+(Do not use or submit any real patient data.) Tj
+T*
+(Partial work is fine. If you run out of time, say clearly in the README what is done,) Tj
+T*
+(what) Tj
+T*
+(isn't, and what you'd do next.) Tj
+T*
+() Tj
+T*
+(What We're Evaluating) Tj
+T*
+(Clinical safety \(never fabricating, always flagging the unknown\) above all; the quality) Tj
+T*
+(of your) Tj
+T*
+(agentic design \(planning, tool use, recovery, control\); how you handle the messy and) Tj
+T*
+(contradictory cases; the soundness of your Part 2 learning loop and its measured) Tj
+T*
+(results; and the) Tj
+T*
+(clarity of your code, traces, and reasoning.) Tj
+T*
+(Good luck ? we're more interested in sound judgment under uncertainty than in a polished) Tj
+T*
+(happy path.) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000140 00000 n 
+0000000210 00000 n 
+0000000336 00000 n 
+0000002901 00000 n 
+0000003027 00000 n 
+0000006134 00000 n 
+0000006260 00000 n 
+0000009316 00000 n 
+0000009444 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+10353
+%%EOF

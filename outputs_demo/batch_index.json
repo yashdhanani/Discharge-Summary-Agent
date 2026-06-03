@@ -1,0 +1,36 @@
+[
+  {
+    "input": "/Users/yash/Desktop/home assignment/demo_patients/patient-a-clean",
+    "output": "/Users/yash/Desktop/home assignment/outputs_demo/patient-a-clean",
+    "quality": {
+      "missing": [],
+      "uncertain": [],
+      "discharge_meds": 4,
+      "review_flags": 2
+    },
+    "learning": {
+      "before_edit_burden": 0.0154,
+      "after_edit_burden": 0.0136,
+      "best_strategy": "safety_first"
+    }
+  },
+  {
+    "input": "/Users/yash/Desktop/home assignment/demo_patients/patient-b-conflict-pending",
+    "output": "/Users/yash/Desktop/home assignment/outputs_demo/patient-b-conflict-pending",
+    "quality": {
+      "missing": [
+        "discharge_date",
+        "procedures",
+        "allergies"
+      ],
+      "uncertain": [],
+      "discharge_meds": 3,
+      "review_flags": 10
+    },
+    "learning": {
+      "before_edit_burden": 0.0117,
+      "after_edit_burden": 0.0022,
+      "best_strategy": "safety_first"
+    }
+  }
+]
