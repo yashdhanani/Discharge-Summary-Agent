@@ -5,7 +5,7 @@ from textwrap import wrap
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEMO_DIR = ROOT / "demo_patients"
+SAMPLE_DIR = ROOT / "sample_patients"
 
 
 PATIENTS = {
@@ -50,7 +50,7 @@ PATIENTS = {
 
 def main() -> None:
     for patient_id, lines in PATIENTS.items():
-        folder = DEMO_DIR / patient_id
+        folder = SAMPLE_DIR / patient_id
         folder.mkdir(parents=True, exist_ok=True)
         write_pdf(folder / "source_notes.pdf", lines)
         (folder / "source_notes.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -127,7 +127,7 @@ class AgentSafetyTests(unittest.TestCase):
             write_pdf(
                 pdf,
                 [
-                    "Patient: Demo Patient, 40-year-old female",
+                    "Patient: Sample Patient, 40-year-old female",
                     "Admission Date: 2026-01-01",
                     "Discharge Date: 2026-01-02",
                     "Principal Diagnosis: Community acquired pneumonia",

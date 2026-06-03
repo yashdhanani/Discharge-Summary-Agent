@@ -32,13 +32,13 @@ ALLOWED_ARTIFACTS = {
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run the local Dscribe agent web dashboard.")
+    parser = argparse.ArgumentParser(description="Run the local discharge-summary agent web dashboard.")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
 
     server = ThreadingHTTPServer((args.host, args.port), DashboardHandler)
-    print(f"Dscribe dashboard: http://{args.host}:{args.port}")
+    print(f"Discharge Summary Agent dashboard: http://{args.host}:{args.port}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
@@ -78,9 +78,9 @@ class DashboardHandler(BaseHTTPRequestHandler):
                 {
                     "status": "ok",
                     "version": APP_VERSION,
-                    "assignment_scope": "provided_patient_and_two_demo_patients",
+                    "project_scope": "provided_patient_and_two_sample_patients",
                     "task_input_exists": (ROOT / "task").exists(),
-                    "demo_input_exists": (ROOT / "demo_patients").exists(),
+                    "sample_input_exists": (ROOT / "sample_patients").exists(),
                     "artifact_keys": sorted(ALLOWED_ARTIFACTS),
                     "runs": len(list_runs()),
                 }
@@ -159,8 +159,8 @@ class DashboardHandler(BaseHTTPRequestHandler):
 
 def run_dashboard_job(payload: dict[str, Any]) -> dict[str, Any]:
     mode = payload.get("mode", "task")
-    if mode not in {"task", "demo"}:
-        raise ValueError("mode must be 'task' or 'demo'.")
+    if mode not in {"task", "sample"}:
+        raise ValueError("mode must be 'task' or 'sample'.")
     max_steps = _coerce_step_limit(payload.get("max_steps", DEFAULT_MAX_STEPS))
     learning = bool(payload.get("learning", True))
     agent = DischargeSummaryAgent(max_steps=max_steps, ocr_cache_dir=default_ocr_cache(ROOT / "outputs"))
@@ -169,10 +169,10 @@ def run_dashboard_job(payload: dict[str, Any]) -> dict[str, Any]:
         summary = run_one(agent, ROOT / "task", ROOT / "outputs", learning)
         return {"mode": mode, "max_steps": max_steps, "runs": [summary], "available_runs": list_runs()}
 
-    output_root = ROOT / "outputs_demo"
-    patient_inputs = discover_patient_inputs(ROOT / "demo_patients")
+    output_root = ROOT / "outputs_samples"
+    patient_inputs = discover_patient_inputs(ROOT / "sample_patients")
     if not patient_inputs:
-        raise ValueError("No demo patient PDFs found in demo_patients.")
+        raise ValueError("No sample patient PDFs found in sample_patients.")
     runs = []
     for patient_input in patient_inputs:
         patient_output = output_root / slug(patient_input.stem if patient_input.is_file() else patient_input.name)
@@ -185,11 +185,11 @@ def list_runs() -> list[dict[str, Any]]:
     runs: list[dict[str, Any]] = []
     if (ROOT / "outputs" / "quality_report.json").exists():
         runs.append(_run_metadata("provided", "Provided patient source notes", ROOT / "outputs"))
-    demo_root = ROOT / "outputs_demo"
-    if demo_root.exists():
-        for child in sorted(demo_root.iterdir()):
+    sample_root = ROOT / "outputs_samples"
+    if sample_root.exists():
+        for child in sorted(sample_root.iterdir()):
             if child.is_dir() and (child / "quality_report.json").exists():
-                runs.append(_run_metadata(f"demo/{child.name}", f"Demo: {child.name.replace('-', ' ')}", child))
+                runs.append(_run_metadata(f"sample/{child.name}", f"Sample: {child.name.replace('-', ' ')}", child))
     return runs
 
 

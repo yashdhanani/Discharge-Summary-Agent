@@ -17,7 +17,7 @@ def main() -> None:
     parser.add_argument("--input", required=True, help="Patient PDF or folder containing patient source PDFs.")
     parser.add_argument("--output", default="outputs", help="Output directory for draft, trace, and metrics.")
     parser.add_argument("--max-steps", type=int, default=10, help="Hard cap on agent loop iterations.")
-    parser.add_argument("--learning-demo", action="store_true", help="Run Part 2 simulated edit-learning demo.")
+    parser.add_argument("--learning-report", action="store_true", help="Run the simulated edit-learning report.")
     parser.add_argument("--batch", action="store_true", help="Treat each immediate child folder/PDF as a separate patient.")
     args = parser.parse_args()
 
@@ -30,14 +30,14 @@ def main() -> None:
         runs = []
         for patient_input in discover_patient_inputs(Path(args.input)):
             patient_output = output_dir / slug(patient_input.stem if patient_input.is_file() else patient_input.name)
-            runs.append(run_one(agent, patient_input, patient_output, args.learning_demo))
+            runs.append(run_one(agent, patient_input, patient_output, args.learning_report))
         (output_dir / "batch_index.json").write_text(json.dumps(runs, indent=2), encoding="utf-8")
         print(f"Wrote {output_dir / 'batch_index.json'}")
     else:
-        run_one(agent, Path(args.input), output_dir, args.learning_demo)
+        run_one(agent, Path(args.input), output_dir, args.learning_report)
 
 
-def run_one(agent: DischargeSummaryAgent, input_path: Path, output_dir: Path, learning_demo: bool) -> dict:
+def run_one(agent: DischargeSummaryAgent, input_path: Path, output_dir: Path, learning_report: bool) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     state = agent.run(input_path)
     draft = render_markdown(state)
@@ -56,10 +56,10 @@ def run_one(agent: DischargeSummaryAgent, input_path: Path, output_dir: Path, le
     print(f"Wrote {output_dir / 'quality_report.md'}")
 
     learning_summary = None
-    if learning_demo:
+    if learning_report:
         report = run_learning_demo(draft, output_dir / "learning_metrics.json")
         print(f"Wrote {output_dir / 'learning_metrics.json'}")
-        print(f"Learning demo: before={report['before_edit_burden']} after={report['after_edit_burden']} best={report['best_strategy']}")
+        print(f"Learning report: before={report['before_edit_burden']} after={report['after_edit_burden']} best={report['best_strategy']}")
         learning_summary = {
             "before_edit_burden": report["before_edit_burden"],
             "after_edit_burden": report["after_edit_burden"],

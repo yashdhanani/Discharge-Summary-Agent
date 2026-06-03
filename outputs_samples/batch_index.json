@@ -1,7 +1,7 @@
 [
   {
-    "input": "demo_patients/patient-a-clean",
-    "output": "outputs_demo/patient-a-clean",
+    "input": "sample_patients/patient-a-clean",
+    "output": "outputs_samples/patient-a-clean",
     "quality": {
       "missing": [],
       "uncertain": [],
@@ -15,8 +15,8 @@
     }
   },
   {
-    "input": "demo_patients/patient-b-conflict-pending",
-    "output": "outputs_demo/patient-b-conflict-pending",
+    "input": "sample_patients/patient-b-conflict-pending",
+    "output": "outputs_samples/patient-b-conflict-pending",
     "quality": {
       "missing": [
         "discharge_date",

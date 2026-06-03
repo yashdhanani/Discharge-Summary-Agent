@@ -7,8 +7,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RUN_DIRS = [
     ROOT / "outputs",
-    ROOT / "outputs_demo" / "patient-a-clean",
-    ROOT / "outputs_demo" / "patient-b-conflict-pending",
+    ROOT / "outputs_samples" / "patient-a-clean",
+    ROOT / "outputs_samples" / "patient-b-conflict-pending",
 ]
 REQUIRED_ARTIFACTS = [
     "discharge_summary_draft.md",
@@ -25,26 +25,26 @@ def main() -> None:
     for folder in RUN_DIRS:
         errors.extend(validate_run_folder(folder))
 
-    batch_index = ROOT / "outputs_demo" / "batch_index.json"
+    batch_index = ROOT / "outputs_samples" / "batch_index.json"
     if not batch_index.exists():
-        errors.append("outputs_demo/batch_index.json is missing.")
+        errors.append("outputs_samples/batch_index.json is missing.")
     else:
         batch = read_json(batch_index, errors)
         if len(batch or []) < 2:
-            errors.append("Demo batch should include at least two patients.")
+            errors.append("Sample batch should include at least two patients.")
 
     for path in [ROOT / "web" / "index.html", ROOT / "web" / "app.js", ROOT / "web" / "styles.css"]:
         if not path.exists():
             errors.append(f"{path.relative_to(ROOT)} is missing.")
 
     if errors:
-        print("Submission validation failed:")
+        print("Project validation failed:")
         for error in errors:
             print(f"- {error}")
         raise SystemExit(1)
 
-    print("Submission validation passed.")
-    print(f"Checked {len(RUN_DIRS)} run folders, generated artifacts, demo batch, and web assets.")
+    print("Project validation passed.")
+    print(f"Checked {len(RUN_DIRS)} run folders, generated artifacts, sample batch, and web assets.")
 
 
 def validate_run_folder(folder: Path) -> list[str]:

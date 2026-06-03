@@ -1,8 +1,8 @@
 {
-  "project": "Dscribe Discharge Summary Agent",
+  "project": "Discharge Summary Agent",
   "repo_url": "https://github.com/yashdhanani/Discharge-Summary-Agent",
   "pages_url": "https://yashdhanani.github.io/Discharge-Summary-Agent/",
-  "generated_at": "2026-06-03T04:12:40.219716+00:00",
+  "generated_at": "2026-06-03T05:15:55.043002+00:00",
   "runs": [
     {
       "id": "provided",
@@ -84,7 +84,7 @@
     },
     {
       "id": "patient-a-clean",
-      "label": "Demo: patient a clean",
+      "label": "Sample: patient a clean",
       "status": "ready",
       "artifacts": {
         "draft": "data/runs/patient-a-clean/discharge_summary_draft.md",
@@ -146,7 +146,7 @@
     },
     {
       "id": "patient-b-conflict-pending",
-      "label": "Demo: patient b conflict pending",
+      "label": "Sample: patient b conflict pending",
       "status": "ready",
       "artifacts": {
         "draft": "data/runs/patient-b-conflict-pending/discharge_summary_draft.md",

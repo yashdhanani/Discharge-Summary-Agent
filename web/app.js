@@ -7,7 +7,7 @@ const state = {
 
 const els = {
   runTask: document.getElementById("runTask"),
-  runDemo: document.getElementById("runDemo"),
+  runSample: document.getElementById("runSample"),
   refresh: document.getElementById("refresh"),
   runList: document.getElementById("runList"),
   content: document.getElementById("content"),
@@ -27,7 +27,7 @@ els.tabs.forEach((tab) => {
 });
 
 els.runTask.addEventListener("click", () => runJob("task"));
-els.runDemo.addEventListener("click", () => runJob("demo"));
+els.runSample.addEventListener("click", () => runJob("sample"));
 els.refresh.addEventListener("click", () => refresh());
 
 activateTab(state.activeTab, false);
@@ -60,7 +60,7 @@ async function runJob(mode) {
     state.runs = result.available_runs || [];
     state.selectedRunId = inferRunIdFromResult(result);
     reconcileSelectedRun();
-    showToast(mode === "task" ? "Provided patient run complete" : "Demo batch run complete");
+    showToast(mode === "task" ? "Provided patient run complete" : "Sample batch run complete");
     renderRuns();
     renderMetrics();
     await renderActiveArtifact();
@@ -75,8 +75,8 @@ function inferRunIdFromResult(result) {
   if (result.mode === "task") return "provided";
   const firstOutput = result.runs?.[0]?.output || "";
   const lastSegment = firstOutput.split(/[\\/]/).filter(Boolean).pop();
-  if (lastSegment) return `demo/${lastSegment}`;
-  return state.runs.find((run) => run.id.startsWith("demo/"))?.id || state.runs[0]?.id || null;
+  if (lastSegment) return `sample/${lastSegment}`;
+  return state.runs.find((run) => run.id.startsWith("sample/"))?.id || state.runs[0]?.id || null;
 }
 
 function reconcileSelectedRun() {
@@ -482,7 +482,7 @@ function renderEmptyDashboard(message) {
 function setLoading(value) {
   state.loading = value;
   document.body.classList.toggle("is-loading", value);
-  [els.runTask, els.runDemo, els.refresh].forEach((button) => {
+  [els.runTask, els.runSample, els.refresh].forEach((button) => {
     button.disabled = value;
     button.setAttribute("aria-busy", String(value));
   });

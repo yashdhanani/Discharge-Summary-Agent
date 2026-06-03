@@ -25,11 +25,11 @@ ARTIFACTS = {
 
 RUN_SPECS = [
     ("provided", "Provided patient source notes", ROOT / "outputs"),
-    ("patient-a-clean", "Demo: patient a clean", ROOT / "outputs_demo" / "patient-a-clean"),
+    ("patient-a-clean", "Sample: patient a clean", ROOT / "outputs_samples" / "patient-a-clean"),
     (
         "patient-b-conflict-pending",
-        "Demo: patient b conflict pending",
-        ROOT / "outputs_demo" / "patient-b-conflict-pending",
+        "Sample: patient b conflict pending",
+        ROOT / "outputs_samples" / "patient-b-conflict-pending",
     ),
 ]
 
@@ -82,7 +82,7 @@ def main() -> None:
         )
 
     manifest = {
-        "project": "Dscribe Discharge Summary Agent",
+        "project": "Discharge Summary Agent",
         "repo_url": REPO_URL,
         "pages_url": PAGES_URL,
         "generated_at": datetime.now(timezone.utc).isoformat(),

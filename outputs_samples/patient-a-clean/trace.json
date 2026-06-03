@@ -4,9 +4,9 @@
     "reasoning": "Need source text before any clinical extraction; sparse PDFs require fallback rather than silent failure.",
     "tool_or_action": "ingest_pdfs",
     "inputs": {
-      "input_path": "demo_patients/patient-b-conflict-pending"
+      "input_path": "sample_patients/patient-a-clean"
     },
-    "result": "Read 1 PDF(s), 1 page(s), 1104 extracted characters.",
+    "result": "Read 1 PDF(s), 1 page(s), 968 extracted characters.",
     "next_decision": "Continue to extract_summary_fields."
   },
   {
@@ -29,7 +29,7 @@
       ],
       "discharge_meds": []
     },
-    "result": "Extracted 10 summary fields; 3 need review.",
+    "result": "Extracted 10 summary fields; 0 need review.",
     "next_decision": "Continue to extract_pending_results."
   },
   {
@@ -52,7 +52,7 @@
       ],
       "discharge_meds": []
     },
-    "result": "Found 2 pending/missing result mention(s).",
+    "result": "Found 1 pending/missing result mention(s).",
     "next_decision": "Continue to extract_medications."
   },
   {
@@ -74,12 +74,13 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
-    "result": "Extracted 3 discharge meds and 1 admission/inpatient meds.",
+    "result": "Extracted 4 discharge meds and 2 admission/inpatient meds.",
     "next_decision": "Continue to reconcile_medications."
   },
   {
@@ -101,12 +102,13 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
-    "result": "Medication reconciliation produced 4 rows; 4 flagged.",
+    "result": "Medication reconciliation produced 4 rows; 2 flagged.",
     "next_decision": "Continue to detect_conflicts."
   },
   {
@@ -128,12 +130,13 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
-    "result": "Detected 1 potential conflict(s).",
+    "result": "Detected 0 potential conflict(s).",
     "next_decision": "Continue to run_safety_tools because discharge medications were extracted."
   },
   {
@@ -155,12 +158,13 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
-    "result": "Drug-interaction mock returned 2 alert(s).",
+    "result": "Drug-interaction mock returned 0 alert(s).",
     "next_decision": "Continue to validate_no_fabrication."
   },
   {
@@ -182,9 +186,10 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
     "result": "No-fabrication guardrail checked 10 fields; downgraded 0.",
@@ -209,9 +214,10 @@
         "discharge_condition"
       ],
       "discharge_meds": [
-        "OFLOX TZ",
-        "LOPERAMIDE",
-        "METRONIDAZOLE"
+        "AMOXICILLIN",
+        "METFORMIN",
+        "AMLODIPINE",
+        "PANTOPRAZOLE"
       ]
     },
     "result": "Draft can be rendered from supported fields and explicit flags.",
