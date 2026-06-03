@@ -90,6 +90,7 @@ def main() -> None:
     }
     DATA.mkdir(parents=True, exist_ok=True)
     (DATA / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (DOCS / ".nojekyll").touch()
 
 
 def read_json(path: Path) -> dict[str, Any]:
