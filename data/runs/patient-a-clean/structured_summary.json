@@ -1,0 +1,315 @@
+{
+  "document_status": "clinical_review_required",
+  "required_sections": {
+    "patient_demographics": {
+      "value": "Maya Rao, 54-year-old female",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Patient: Maya Rao, 54-year-old female"
+        }
+      ],
+      "flags": []
+    },
+    "admission_date": {
+      "value": "2026-01-10",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Date: 2026-01-10"
+        }
+      ],
+      "flags": []
+    },
+    "discharge_date": {
+      "value": "2026-01-13",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Discharge Date: 2026-01-13"
+        }
+      ],
+      "flags": []
+    },
+    "principal_diagnosis": {
+      "value": "Community-acquired pneumonia",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Community-acquired pneumonia"
+        }
+      ],
+      "flags": []
+    },
+    "secondary_diagnoses": {
+      "value": [
+        {
+          "value": "Type 2 diabetes mellitus",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Type 2 diabetes mellitus"
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "Hypertension",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Hypertension"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Type 2 diabetes mellitus"
+        },
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Hypertension"
+        }
+      ],
+      "flags": []
+    },
+    "hospital_course": {
+      "value": "Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV cannulization Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV cannulization Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": []
+    },
+    "procedures": {
+      "value": [
+        {
+          "value": "IV Cannulization",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Patient: Maya Rao, 54-year-old female Admission Date: 2026-01-10 Discharge Date: 2026-01-13 Principal Diagnosis: Community acquired pneumonia Secondary Diagnoses: Type 2 diabetes mellitus; hypertension Allergies: No known drug allergies Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV can"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [],
+      "flags": []
+    },
+    "allergies": {
+      "value": "No known drug allergies documented",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Patient: Maya Rao, 54-year-old female Admission Date: 2026-01-10 Discharge Date: 2026-01-13 Principal Diagnosis: Community acquired pneumonia Secondary Diagnoses: Type 2 diabetes mellitus; hypertension Allergies: No known drug allergies Hospital Course: Patient admitted with fever, productive cough, and hypoxia. Chest X-ray showed right lower zone infiltrate. Treated with IV antibiotics, oxygen, and bronchodilator support. Oxygen requirement resolved by discharge. Procedures: Chest X-ray; IV can"
+        }
+      ],
+      "flags": []
+    },
+    "follow_up_instructions": {
+      "value": "Follow-up Instructions: Review with physician in 7 days. Return earlier for fever, breathlessness, chest pain, or persistent vomiting.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Follow-up Instructions: Review with physician in 7 days. Return earlier for fever, breathlessness, chest pain, or persistent vomiting."
+        }
+      ],
+      "flags": []
+    },
+    "discharge_condition": {
+      "value": "Hemodynamically stable, maintaining saturation on room air.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Discharge Condition: Hemodynamically stable, maintaining saturation on room air."
+        }
+      ],
+      "flags": []
+    }
+  },
+  "discharge_medications": [
+    {
+      "name": "AMOXICILLIN",
+      "dose": "500MG",
+      "frequency": "TDS",
+      "duration": "5 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB AMOXICILLIN 500MG TDS 5 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "METFORMIN",
+      "dose": "500MG",
+      "frequency": "BD",
+      "duration": "30 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB METFORMIN 500MG BD 30 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "AMLODIPINE",
+      "dose": "5MG",
+      "frequency": "OD",
+      "duration": "30 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB AMLODIPINE 5MG OD 30 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "PANTOPRAZOLE",
+      "dose": "40MG",
+      "frequency": "OD",
+      "duration": "7 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB PANTOPRAZOLE 40MG OD 7 DAYS"
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "admission_or_inpatient_medications": [
+    {
+      "name": "METFORMIN",
+      "dose": "500MG",
+      "frequency": "BD",
+      "duration": "MISSING",
+      "source": "admission",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": [
+        "Admission medication duration usually not documented; compare name/dose/frequency only."
+      ]
+    },
+    {
+      "name": "AMLODIPINE",
+      "dose": "5MG",
+      "frequency": "OD",
+      "duration": "MISSING",
+      "source": "admission",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Medications: Metformin 500MG BD; Amlodipine 5MG OD"
+        }
+      ],
+      "flags": [
+        "Admission medication duration usually not documented; compare name/dose/frequency only."
+      ]
+    }
+  ],
+  "medication_reconciliation": [
+    {
+      "medication": "AMOXICILLIN",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "METFORMIN",
+      "status": "continued/changed",
+      "matched_admission_med": "METFORMIN",
+      "flags": []
+    },
+    {
+      "medication": "AMLODIPINE",
+      "status": "continued/changed",
+      "matched_admission_med": "AMLODIPINE",
+      "flags": []
+    },
+    {
+      "medication": "PANTOPRAZOLE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    }
+  ],
+  "pending_results": [
+    {
+      "value": "None documented.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Pending Results: None documented."
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "conflicts": [],
+  "clinician_review_flags": [
+    "CLINICIAN_REVIEW: Medication reconciliation: AMOXICILLIN - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: PANTOPRAZOLE - No clear matching admission medication found; reconcile indication/reason."
+  ]
+}

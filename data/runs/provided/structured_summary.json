@@ -1,0 +1,460 @@
+{
+  "document_status": "clinical_review_required",
+  "required_sections": {
+    "patient_demographics": {
+      "value": "MISSING",
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "No reliable patient name/age/gender found in source notes."
+      ]
+    },
+    "admission_date": {
+      "value": "MISSING",
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "Admission date not reliably found.",
+        "Admission date label present but value unclear on patient_source_notes.pdf p9.",
+        "Admission date label present but value unclear on patient_source_notes.pdf p10.",
+        "Admission date label present but value unclear on patient_source_notes.pdf p11."
+      ]
+    },
+    "discharge_date": {
+      "value": "MISSING",
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "Discharge date not reliably found.",
+        "Discharge date label present but value unclear on patient_source_notes.pdf p12."
+      ]
+    },
+    "principal_diagnosis": {
+      "value": "Acute gastroenteritis with dehydration",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "Acute gastroenteritis with dehydration"
+        }
+      ],
+      "flags": []
+    },
+    "secondary_diagnoses": {
+      "value": [
+        {
+          "value": "Urinary tract infection",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "patient_source_notes.pdf",
+              "page": 1,
+              "text": "Urinary tract infection"
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "Cholelithiasis without cholecystitis",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "patient_source_notes.pdf",
+              "page": 26,
+              "text": "Cholelithiasis without cholecystitis"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "Urinary tract infection"
+        },
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 26,
+          "text": "Cholelithiasis without cholecystitis"
+        }
+      ],
+      "flags": []
+    },
+    "hospital_course": {
+      "value": "cni rRSF. Tfi THF. HnspTT.41.: PiiliLnl prLsenlLJ Io us ii'iili aboi'L InenliL)nLd Lompldinls. t%fiLf Ll'iiludlLL)n: shL 14'clS <lcJtiiiited tO Vthf{Ircl. liiili11 itiN'e4lig'.)Ii011s sliow'ed norni<l I CBC. SeriiJn creaLitiine ( l.C)5in_LJdl) done Iw\"dS eleirdted. Seruni electrnli'te4i doiie sliow'ed Iilll4' SLruin 50diuni( l ?S.OOinnullL). UrinL rouliiiL donL shoNs'Ld kLlunL budiLs(+): l O- 1211ipf of piis cells, l fj-?O/lipf of epiiheli'il cells Ni'iih preseiice of bacireia Iience uriiie culture atid sensiliN'ity sent- I\"epnrt aii'aited. She tre<lted i4'iih IIT fluids: --- PAGE 2 --- Iir dnlibioliLS: IV PPI's, 11 4inliLtnLIiLS dnJ oihLr supporliN'L tnLdsurcs. LISCi 1bdL)men .Ind F*IN'is done sliovb'ed Graile-I f<ltt)' ljieer ch'in?es 'ind mildlv edeinatclUS part ()r <1SLendino LLilI)n, uptD Ihe hepatic flexui\"e_ \u00a2nuld repre4eiit LuliLis. RLpLdL SLrurn LrL.'IlininLI1.17mgldl) donL N%'dS normdl. TSH dnd, FrLL T4 di)Iie w'Lre noriiJcil, StLwl roiiiiIi\u00a2 clL)Iie shL)Nl'Ld ?_Illipf Lif red blood CL\"IIs, pILntTr'lhpf nf pLs cells. Paticnt Ii'a.s adN'iLYd to .stav back for lurther rndlldgTLtnLnL buL dLLLndLrs nul i%'illing Lo IhL, &'imL. hLnLL bLin\u00a5 disLhdf4Ld dl reqiiesi w'itli folloi4'ing <ldi'ice. C()NDITinN .4T DISCHARC.F: I leniodifncltniL<ill!' stable ,ADN;ICF. ON DISCHARCF.: Icdication LNanic 1)05age Tr-rcqucnc)' l)uration 7 DAYS TAB. RACIPF.R i-o-o",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "cni rRSF. Tfi THF. HnspTT.41.: PiiliLnl prLsenlLJ Io us ii'iili aboi'L InenliL)nLd Lompldinls. t%fiLf Ll'iiludlLL)n: shL 14'clS <lcJtiiiited tO Vthf{Ircl. liiili11 itiN'e4lig'.)Ii011s sliow'ed norni<l I CBC. SeriiJn creaLitiine ( l.C)5in_LJdl) done Iw\"dS eleirdted. Seruni electrnli'te4i doiie sliow'ed Iilll4' SLruin 50diuni( l ?S.OOinnullL). UrinL rouliiiL donL shoNs'Ld kLlunL budiLs(+): l O- 1211ipf of piis cells, l fj-?O/lipf of epiiheli'il cells Ni'iih preseiice of bacireia Iience uriiie cult"
+        }
+      ],
+      "flags": []
+    },
+    "procedures": {
+      "value": [
+        {
+          "value": "IV Cannulization",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "patient_source_notes.pdf",
+              "page": 7,
+              "text": "IV CannuLization N.G. Tube Inscertion Fell\u00a5s Catheterisation l.C.D. c.v.p. Intubation Phototherapy Urine C.IS. Blood CJS. PW& Vein O Line Oxygen Ventilator Bubble CPAP NP02 HFNC Viral Serology/Study Bone marrow U5GIECHO Tapping Blood Transfussion Dressing Signature --- PAGE 16 --- NURSING ASSESSMENT ON ADMISSION Daie & Time of Nursing Initial Assessment: g6-g-J b 6',1 General Consent Signed: Yes / No Vital Signs Temp Pulse: Jl 6 b IMin Resp: b /Min Blood Group SP02 (if required) BP:341\u00a50 Height "
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "Echo",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "patient_source_notes.pdf",
+              "page": 7,
+              "text": "IV CannuLization N.G. Tube Inscertion Fell\u00a5s Catheterisation l.C.D. c.v.p. Intubation Phototherapy Urine C.IS. Blood CJS. PW& Vein O Line Oxygen Ventilator Bubble CPAP NP02 HFNC Viral Serology/Study Bone marrow U5GIECHO Tapping Blood Transfussion Dressing Signature --- PAGE 16 --- NURSING ASSESSMENT ON ADMISSION Daie & Time of Nursing Initial Assessment: g6-g-J b 6',1 General Consent Signed: Yes / No Vital Signs Temp Pulse: Jl 6 b IMin Resp: b /Min Blood Group SP02 (if required) BP:341\u00a50 Height "
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "USG abdomen/pelvis",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "patient_source_notes.pdf",
+              "page": 17,
+              "text": "grn/dL 31.0- 35.0 Pl\u00e8telet Count (Automated/Blood) 2.56 Lakhs/crnm 1.40 - 4.50 BIOCHEMLSTRY M?4n Dlc<KJ CIucT>?? SCROLOGY CA.P (C-R?actiw PrDtL?ln) [lrnmunolurbldimoiryisorum) - [N>riad On NUL J52, WdL 00.2J mo/L Nvw lJ() O days :&5S than 0.6 mg/l I day ;Loss thon 3.2 mg/l 7 Day? ;Les9 Ihan 1.6 rn9/1 AdulLs :L\u00a2ss Ihan 5.0 mg/ SalnknnollD typhl 'O\" Salmonclla typhl \"H\" Salmonolla paratyphl \"AH\" Salmonella poratyphl \"BH\" Po?6tlv? 1: 160 0llutlon? Po?ltlvo I:80 Dllutlon? Negatlve 1: 20 DlluLlons Ne"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [],
+      "flags": []
+    },
+    "allergies": {
+      "value": "Allergy field present but value unclear",
+      "status": "uncertain",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 9,
+          "text": "Gastrointestinal Atidomen : Soft / Firm l Tender I Distention l Expelling Flatus Swallowing difficulty: Yes i Dysuria :Yes / No Frequency : Incontinence : Yes l No Genitourinary Hematuria : YeslNo (Z Any Drug Allergy Q+ l ?401ty) --- PAGE 17 --- NURSES NOTES Known Drug Allergies Date m? Observatlon / Nsg Actlon l Response / Plan taff Name & I ?(9 ZG (I (? -LCg &nQ _ NB - All iDjectior15 to be Initiated Date Of Admission Krbown DruE Allergies r50ns admi Stering and witne5sing )c trJoI (Srno K) Ip"
+        }
+      ],
+      "flags": [
+        "OCR/source text does not clearly state allergy value."
+      ]
+    },
+    "follow_up_instructions": {
+      "value": "FOLLOW'.LTP INSTRLrcrioNS: Llrine \u00a2ulture and scnsiti%itTr' scnt- roport aMailed. Rei'icw immediatel!' in c&se nf fei'er,100s\u00a2 Stwls, I'omiting? fgtigue. Rei'iew on IW.01.2026. CBC --- PAGE 3 --- ER OBSERVATION CHART(I) Tr5age Cate8l?iy Red MRN: Yellow Green ER op MLC No- Diagnosis= Time of arrival ER Doctor: Time of response Time of response 6 ill4 VITAL PARAMETERS Time 61>4P bbl 115 Time ',IL41 Pulse Sao2 OxyRen BP RR Urine",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "FOLLOW'.LTP INSTRLrcrioNS: Llrine \u00a2ulture and scnsiti%itTr' scnt- roport aMailed. Rei'icw immediatel!' in c&se nf fei'er,100s\u00a2 Stwls, I'omiting? fgtigue. Rei'iew on IW.01.2026. CBC --- PAGE 3 --- ER OBSERVATION CHART(I) Tr5age Cate8l?iy Red MRN: Yellow Green ER op MLC No- Diagnosis= Time of arrival ER Doctor: Time of response Time of response 6 ill4 VITAL PARAMETERS Time 61>4P bbl 115 Time ',IL41 Pulse Sao2 OxyRen BP RR Urine"
+        }
+      ],
+      "flags": []
+    },
+    "discharge_condition": {
+      "value": "I leniodifncltniL<ill!' stable",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "I leniodifncltniL<ill!' stable"
+        }
+      ],
+      "flags": []
+    }
+  },
+  "discharge_medications": [
+    {
+      "name": "RACIPER",
+      "dose": "MISSING",
+      "frequency": "I-O-O",
+      "duration": "MISSING",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "TAB. RACIPF.R | i-o-o"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Duration not reliably sourced."
+      ]
+    },
+    {
+      "name": "EMESET",
+      "dose": "4MG",
+      "frequency": "MISSING",
+      "duration": "MISSING",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "TAB. ENfESET | 4MG | 3 r)Al'.S"
+        }
+      ],
+      "flags": [
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced."
+      ]
+    },
+    {
+      "name": "OFLOX TZ",
+      "dose": "MISSING",
+      "frequency": "MISSING",
+      "duration": "5 D",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "TIlB. OFLO.X TZ | 5 D.,Il'S"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced."
+      ]
+    },
+    {
+      "name": "METRONIDAZOLE-LIKE",
+      "dose": "MISSING",
+      "frequency": "I-O-O",
+      "duration": "15 D.",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "T,4B M tiTRUN'Ci | i-o-o | 15 D.4YS"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced."
+      ]
+    },
+    {
+      "name": "ZIDORR",
+      "dose": "MISSING",
+      "frequency": "MISSING",
+      "duration": "MISSING",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "TAB. ZIDorr | 3 DAI'S"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced."
+      ]
+    },
+    {
+      "name": "ENTERO",
+      "dose": "MISSING",
+      "frequency": "MISSING",
+      "duration": "MISSING",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "TAB, ENTR( | 3.D,4I'S"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced."
+      ]
+    },
+    {
+      "name": "MEFTAL SPAS",
+      "dose": "MISSING",
+      "frequency": "SOS",
+      "duration": "MISSING",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "TAFI. MF.FTIll. SPAS | I TA14 SOS | 4TABI.F.TS"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Duration not reliably sourced."
+      ]
+    },
+    {
+      "name": "LOPIRAMIDE",
+      "dose": "MISSING",
+      "frequency": "MISSING",
+      "duration": "5 D",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 2,
+          "text": "T,4B. LnPIR,4NIIDE | ?NfG | 5 D,41'.S"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced."
+      ]
+    }
+  ],
+  "admission_or_inpatient_medications": [],
+  "medication_reconciliation": [
+    {
+      "medication": "RACIPER",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Duration not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "EMESET",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "OFLOX TZ",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "METRONIDAZOLE-LIKE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "ZIDORR",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "ENTERO",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "Duration not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "MEFTAL SPAS",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Duration not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "LOPIRAMIDE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "Frequency not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    }
+  ],
+  "pending_results": [
+    {
+      "value": "uriiie culture atid sensiliN'ity sent- I\"epnrt aii'aited. She tre<lted i4'iih IIT",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "patient_source_notes.pdf",
+          "page": 1,
+          "text": "uriiie culture atid sensiliN'ity sent- I\"epnrt aii'aited. She tre<lted i4'iih IIT"
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "diagnosis",
+      "message": "Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+      "values": [
+        "Acute gastroenteritis with dehydration",
+        "Urinary tract infection"
+      ]
+    }
+  ],
+  "clinician_review_flags": [
+    "CLINICIAN_REVIEW: Medication reconciliation: EMESET - Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: ENTERO - Dose not reliably sourced.; Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: LOPIRAMIDE - Dose not reliably sourced.; Frequency not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: MEFTAL SPAS - Dose not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: METRONIDAZOLE-LIKE - Dose not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: OFLOX TZ - Dose not reliably sourced.; Frequency not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: RACIPER - Dose not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: ZIDORR - Dose not reliably sourced.; Frequency not reliably sourced.; Duration not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Metronidazole-like medication found; confirm alcohol avoidance counseling and indication.",
+    "CLINICIAN_REVIEW: Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+    "CLINICIAN_REVIEW: Potential QT/CNS safety concern: quinolone antibiotic plus loperamide-like antidiarrheal; clinician review recommended.",
+    "CLINICIAN_REVIEW: admission_date is missing or uncertain.",
+    "CLINICIAN_REVIEW: allergies is missing or uncertain.",
+    "CLINICIAN_REVIEW: discharge_date is missing or uncertain.",
+    "CLINICIAN_REVIEW: patient_demographics is missing or uncertain."
+  ]
+}

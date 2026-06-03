@@ -1,0 +1,122 @@
+{
+  "reward_signal": "1 - normalized edit burden using SequenceMatcher ratio between draft and simulated doctor edit.",
+  "mechanism": "epsilon-greedy contextual bandit over discharge-summary rendering strategies.",
+  "best_strategy": "safety_first",
+  "before_edit_burden": 0.0139,
+  "after_edit_burden": 0.0139,
+  "curve": [
+    {
+      "iteration": 1,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 2,
+      "strategy": "concise",
+      "edit_burden": 0.0298,
+      "reward": 0.9702
+    },
+    {
+      "iteration": 3,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 4,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 5,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 6,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 7,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 8,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 9,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 10,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 11,
+      "strategy": "concise",
+      "edit_burden": 0.0298,
+      "reward": 0.9702
+    },
+    {
+      "iteration": 12,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 13,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 14,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 15,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 16,
+      "strategy": "verbose",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 17,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    },
+    {
+      "iteration": 18,
+      "strategy": "safety_first",
+      "edit_burden": 0.0139,
+      "reward": 0.9861
+    }
+  ],
+  "production_roadmap": [
+    "Extend the simulated reviewer with clinician-edited held-out charts for stronger real-world validation.",
+    "Keep the learning loop isolated from clinical fact extraction so optimization never changes diagnoses, medications, evidence, or safety flags.",
+    "Add safety-specific evaluation beyond edit burden, including evidence fidelity, medication reconciliation accuracy, and conflict-escalation precision."
+  ]
+}

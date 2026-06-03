@@ -1,0 +1,298 @@
+{
+  "document_status": "clinical_review_required",
+  "required_sections": {
+    "patient_demographics": {
+      "value": "Nisha Patel, 38-year-old female",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Patient: Nisha Patel, 38-year-old female"
+        }
+      ],
+      "flags": []
+    },
+    "admission_date": {
+      "value": "2026-02-04",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Date: 2026-02-04"
+        }
+      ],
+      "flags": []
+    },
+    "discharge_date": {
+      "value": "MISSING",
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "Discharge date not reliably found."
+      ]
+    },
+    "principal_diagnosis": {
+      "value": "Acute gastroenteritis with dehydration",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Acute gastroenteritis with dehydration"
+        }
+      ],
+      "flags": []
+    },
+    "secondary_diagnoses": {
+      "value": [
+        {
+          "value": "Urinary tract infection",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Urinary tract infection"
+            }
+          ],
+          "flags": []
+        },
+        {
+          "value": "Acute kidney injury",
+          "status": "supported",
+          "evidence": [
+            {
+              "source": "source_notes.pdf",
+              "page": 1,
+              "text": "Acute kidney injury"
+            }
+          ],
+          "flags": []
+        }
+      ],
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Urinary tract infection"
+        },
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Acute kidney injury"
+        }
+      ],
+      "flags": []
+    },
+    "hospital_course": {
+      "value": "Hospital Course: Patient presented with loose stools, vomiting, fever, and dysuria. Initial creatinine was elevated and improved after IV fluids. Urine culture and sensitivity was sent; report awaited at discharge. Admission Medications: Thyroxine 50MCG OD",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Hospital Course: Patient presented with loose stools, vomiting, fever, and dysuria. Initial creatinine was elevated and improved after IV fluids. Urine culture and sensitivity was sent; report awaited at discharge. Admission Medications: Thyroxine 50MCG OD"
+        }
+      ],
+      "flags": []
+    },
+    "procedures": {
+      "value": [],
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "No procedures explicitly documented."
+      ]
+    },
+    "allergies": {
+      "value": "MISSING",
+      "status": "missing",
+      "evidence": [],
+      "flags": [
+        "Allergy status not reliably documented."
+      ]
+    },
+    "follow_up_instructions": {
+      "value": "Follow-up Instructions: Review immediately for fever, worsening loose stools, vomiting, fatigue, reduced urine output, or abdominal pain. Review urine culture when available.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Follow-up Instructions: Review immediately for fever, worsening loose stools, vomiting, fatigue, reduced urine output, or abdominal pain. Review urine culture when available."
+        }
+      ],
+      "flags": []
+    },
+    "discharge_condition": {
+      "value": "Stable at request discharge, but final discharge date was not documented in the source note.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Discharge Condition: Stable at request discharge, but final discharge date was not"
+        }
+      ],
+      "flags": []
+    }
+  },
+  "discharge_medications": [
+    {
+      "name": "OFLOX TZ",
+      "dose": "MISSING",
+      "frequency": "1-0-1",
+      "duration": "5 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB OFLOX TZ 1-0-1 5 DAYS"
+        }
+      ],
+      "flags": [
+        "Dose not reliably sourced."
+      ]
+    },
+    {
+      "name": "LOPERAMIDE",
+      "dose": "2MG",
+      "frequency": "SOS",
+      "duration": "3 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB LOPERAMIDE 2MG SOS 3 DAYS"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "name": "METRONIDAZOLE",
+      "dose": "400MG",
+      "frequency": "TDS",
+      "duration": "5 DAYS",
+      "source": "discharge",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "TAB METRONIDAZOLE 400MG TDS 5 DAYS"
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "admission_or_inpatient_medications": [
+    {
+      "name": "THYROXINE",
+      "dose": "50MCG",
+      "frequency": "OD",
+      "duration": "MISSING",
+      "source": "admission",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Admission Medications: Thyroxine 50MCG OD"
+        }
+      ],
+      "flags": [
+        "Admission medication duration usually not documented; compare name/dose/frequency only."
+      ]
+    }
+  ],
+  "medication_reconciliation": [
+    {
+      "medication": "OFLOX TZ",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "Dose not reliably sourced.",
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "LOPERAMIDE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "METRONIDAZOLE",
+      "status": "added_at_discharge_or_not_seen_on_admission",
+      "matched_admission_med": null,
+      "flags": [
+        "No clear matching admission medication found; reconcile indication/reason."
+      ]
+    },
+    {
+      "medication": "THYROXINE",
+      "status": "stopped_or_not_on_discharge_list",
+      "matched_admission_med": null,
+      "flags": [
+        "Medication appears in admission/inpatient source but not discharge list; clinician reconciliation required."
+      ]
+    }
+  ],
+  "pending_results": [
+    {
+      "value": "sensitivity was sent; report awaited at discharge.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "sensitivity was sent; report awaited at discharge."
+        }
+      ],
+      "flags": []
+    },
+    {
+      "value": "Urine culture and sensitivity report awaited.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source": "source_notes.pdf",
+          "page": 1,
+          "text": "Pending Results: Urine culture and sensitivity report awaited."
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "diagnosis",
+      "message": "Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+      "values": [
+        "Acute gastroenteritis with dehydration",
+        "Urinary tract infection"
+      ]
+    }
+  ],
+  "clinician_review_flags": [
+    "CLINICIAN_REVIEW: Medication reconciliation: LOPERAMIDE - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: METRONIDAZOLE - No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: OFLOX TZ - Dose not reliably sourced.; No clear matching admission medication found; reconcile indication/reason.",
+    "CLINICIAN_REVIEW: Medication reconciliation: THYROXINE - Medication appears in admission/inpatient source but not discharge list; clinician reconciliation required.",
+    "CLINICIAN_REVIEW: Metronidazole-like medication found; confirm alcohol avoidance counseling and indication.",
+    "CLINICIAN_REVIEW: Multiple diagnosis statements found; agent did not collapse them into one unsupported final answer.",
+    "CLINICIAN_REVIEW: Potential QT/CNS safety concern: quinolone antibiotic plus loperamide-like antidiarrheal; clinician review recommended.",
+    "CLINICIAN_REVIEW: allergies is missing or uncertain.",
+    "CLINICIAN_REVIEW: discharge_date is missing or uncertain.",
+    "CLINICIAN_REVIEW: procedures is missing or uncertain."
+  ]
+}
