@@ -50,9 +50,6 @@ home assignment/
 |   |-- app.js
 |   |-- favicon.svg
 |   `-- data/
-|-- .github/
-|   `-- workflows/
-|       `-- pages.yml
 |-- demo_patients/
 |   |-- patient-a-clean/
 |   |   |-- source_notes.txt
