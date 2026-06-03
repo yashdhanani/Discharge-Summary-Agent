@@ -9,26 +9,15 @@ from pypdf import PdfReader
 from .models import DocumentPage
 
 
-IGNORED_BRIEF_NAMES = ("gmail", "takehome", "take-home", "assignment")
-
-
-def find_patient_pdfs(input_path: Path, ignore_brief_names: bool | None = None) -> list[Path]:
+def find_patient_pdfs(input_path: Path) -> list[Path]:
     if input_path.is_file():
         return [input_path] if input_path.suffix.lower() == ".pdf" else []
     if not input_path.exists():
         return []
     try:
-        pdfs = sorted(p for p in input_path.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf")
+        return sorted(p for p in input_path.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf")
     except OSError:
         return []
-    if ignore_brief_names is None:
-        ignore_brief_names = input_path.name.lower() == "task"
-    if not ignore_brief_names:
-        return pdfs
-    patient_pdfs = [
-        p for p in pdfs if not any(token in p.name.lower() for token in IGNORED_BRIEF_NAMES)
-    ]
-    return patient_pdfs or pdfs
 
 
 def read_pdf_pages(path: Path, ocr_cache_dir: Path | None = None) -> tuple[list[DocumentPage], list[str]]:

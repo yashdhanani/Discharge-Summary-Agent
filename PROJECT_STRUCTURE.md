@@ -24,8 +24,6 @@ home assignment/
 |-- pyproject.toml
 |-- requirements.txt
 |-- task/
-|   |-- assignment_brief.pdf
-|   |-- gmail_next_steps.pdf
 |   `-- patient_source_notes.pdf
 |-- src/
 |   `-- dscribe_agent/
@@ -89,7 +87,6 @@ Handles patient PDF discovery and text extraction.
 Responsibilities:
 
 - Finds patient PDFs from a file or folder.
-- Ignores assignment/gmail PDFs only when scanning the built-in `task/` folder.
 - Extracts native PDF text with `pypdf`.
 - Detects sparse scanned PDFs.
 - Uses cached OCR from `ocr_cache/` when available.
@@ -310,11 +307,9 @@ Responsibilities:
 
 Contains:
 
-- Gmail instruction PDF.
-- Assignment brief PDF.
-- Provided synthetic patient source-note PDF.
+- `patient_source_notes.pdf`: provided synthetic patient source-note PDF.
 
-The ingestion layer filters out assignment/gmail PDFs so the agent runs on patient source notes.
+Only patient-source material is kept in this folder.
 
 ### `demo_patients/`
 

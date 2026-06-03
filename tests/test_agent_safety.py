@@ -139,23 +139,21 @@ class AgentSafetyTests(unittest.TestCase):
             self.assertGreater(sum(len(page.text) for page in pages), 150)
             self.assertEqual(warnings, [])
 
-    def test_non_task_folder_keeps_assignment_named_patient_pdf(self) -> None:
+    def test_pdf_discovery_returns_nested_patient_sources(self) -> None:
         from scripts.make_synthetic_patients import write_pdf
 
         with tempfile.TemporaryDirectory() as tmp:
-            source_dir = Path(tmp) / "source-notes"
-            task_dir = Path(tmp) / "task"
-            source_dir.mkdir()
-            task_dir.mkdir()
-            source_pdf = source_dir / "assignment_patient_notes.pdf"
-            task_brief = task_dir / "assignment_brief.pdf"
-            task_patient = task_dir / "patient_notes.pdf"
-            write_pdf(source_pdf, ["Patient: Source Patient", "Principal Diagnosis: Pneumonia"])
-            write_pdf(task_brief, ["Assignment instructions"])
-            write_pdf(task_patient, ["Patient: Task Patient", "Principal Diagnosis: Pneumonia"])
+            input_dir = Path(tmp) / "patient-input"
+            nested_dir = input_dir / "notes"
+            nested_dir.mkdir(parents=True)
+            first_pdf = input_dir / "patient_notes.pdf"
+            second_pdf = nested_dir / "lab_report.pdf"
+            non_pdf = input_dir / "readme.txt"
+            write_pdf(first_pdf, ["Patient: Source Patient", "Principal Diagnosis: Pneumonia"])
+            write_pdf(second_pdf, ["Lab Report", "Urine culture pending"])
+            non_pdf.write_text("not a pdf", encoding="utf-8")
 
-            self.assertEqual(find_patient_pdfs(source_dir), [source_pdf])
-            self.assertEqual(find_patient_pdfs(task_dir), [task_patient])
+            self.assertEqual(find_patient_pdfs(input_dir), [second_pdf, first_pdf])
 
     def test_corrupted_pdf_fails_safely(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

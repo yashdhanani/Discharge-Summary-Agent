@@ -15,3 +15,6 @@ dist/
 node_modules/
 .verify-venv/
 .verify_outputs/
+task/*brief*.pdf
+task/*gmail*.pdf
+task/*next*steps*.pdf
