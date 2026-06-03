@@ -189,7 +189,7 @@ class AgentSafetyTests(unittest.TestCase):
             draft = render_markdown(state)
 
             self.assertIn("MISSING", draft)
-            self.assertIn("DRAFT FOR CLINICIAN REVIEW", draft)
+            self.assertEqual(draft.splitlines()[2], "## Required Sections")
             self.assertEqual(state.summary["patient_demographics"].status, "missing")
             self.assertEqual(state.summary["principal_diagnosis"].status, "missing")
 

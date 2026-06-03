@@ -156,7 +156,7 @@ class DischargeSummaryAgent:
             "detect_conflicts": "Contradictory diagnoses or results should be surfaced, not arbitrarily resolved.",
             "run_safety_tools": "Medication safety checks are tool calls that the agent should choose when meds exist.",
             "validate_no_fabrication": "Before rendering, supported facts must have evidence or be downgraded.",
-            "render_draft": "All checks are complete; produce a clinician-review draft.",
+            "render_draft": "All checks are complete; produce the discharge-summary output.",
         }
         return reasons.get(name, f"Continue planned work with {len(state.pages)} pages available.")
 
@@ -202,8 +202,6 @@ class DischargeSummaryAgent:
 def render_markdown(state: AgentState) -> str:
     lines = [
         "# Discharge Summary Draft",
-        "",
-        "Status: DRAFT FOR CLINICIAN REVIEW. Do not finalize without human verification.",
         "",
         "## Required Sections",
     ]

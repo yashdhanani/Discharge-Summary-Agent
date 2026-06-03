@@ -2,20 +2,20 @@
   "reward_signal": "1 - normalized edit burden using SequenceMatcher ratio between draft and simulated doctor edit.",
   "mechanism": "epsilon-greedy contextual bandit over discharge-summary rendering strategies.",
   "best_strategy": "safety_first",
-  "before_edit_burden": 0.0117,
+  "before_edit_burden": 0.0105,
   "after_edit_burden": 0.0022,
   "curve": [
     {
       "iteration": 1,
       "strategy": "verbose",
-      "edit_burden": 0.0117,
-      "reward": 0.9883
+      "edit_burden": 0.0105,
+      "reward": 0.9895
     },
     {
       "iteration": 2,
       "strategy": "concise",
-      "edit_burden": 0.0204,
-      "reward": 0.9796
+      "edit_burden": 0.0186,
+      "reward": 0.9814
     },
     {
       "iteration": 3,
@@ -68,14 +68,14 @@
     {
       "iteration": 11,
       "strategy": "concise",
-      "edit_burden": 0.0204,
-      "reward": 0.9796
+      "edit_burden": 0.0186,
+      "reward": 0.9814
     },
     {
       "iteration": 12,
       "strategy": "verbose",
-      "edit_burden": 0.0117,
-      "reward": 0.9883
+      "edit_burden": 0.0105,
+      "reward": 0.9895
     },
     {
       "iteration": 13,
@@ -92,8 +92,8 @@
     {
       "iteration": 15,
       "strategy": "verbose",
-      "edit_burden": 0.0117,
-      "reward": 0.9883
+      "edit_burden": 0.0105,
+      "reward": 0.9895
     },
     {
       "iteration": 16,

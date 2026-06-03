@@ -2,7 +2,7 @@
   "project": "Discharge Summary Agent",
   "repo_url": "https://github.com/yashdhanani/Discharge-Summary-Agent",
   "pages_url": "https://yashdhanani.github.io/Discharge-Summary-Agent/",
-  "generated_at": "2026-06-03T05:15:55.043002+00:00",
+  "generated_at": "2026-06-03T05:31:45.941154+00:00",
   "runs": [
     {
       "id": "provided",
@@ -77,8 +77,8 @@
         ]
       },
       "learning": {
-        "before_edit_burden": 0.0798,
-        "after_edit_burden": 0.0639,
+        "before_edit_burden": 0.0799,
+        "after_edit_burden": 0.0644,
         "best_strategy": "safety_first"
       }
     },
@@ -139,8 +139,8 @@
         ]
       },
       "learning": {
-        "before_edit_burden": 0.0154,
-        "after_edit_burden": 0.0136,
+        "before_edit_burden": 0.0139,
+        "after_edit_burden": 0.0139,
         "best_strategy": "safety_first"
       }
     },
@@ -210,7 +210,7 @@
         ]
       },
       "learning": {
-        "before_edit_burden": 0.0117,
+        "before_edit_burden": 0.0105,
         "after_edit_burden": 0.0022,
         "best_strategy": "safety_first"
       }

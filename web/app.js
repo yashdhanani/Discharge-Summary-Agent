@@ -466,7 +466,6 @@ function markdownToHtml(markdown) {
     if (trimmed.startsWith("### ")) html += `<h3>${escapeHtml(trimmed.slice(4))}</h3>`;
     else if (trimmed.startsWith("## ")) html += `<h2>${escapeHtml(trimmed.slice(3))}</h2>`;
     else if (trimmed.startsWith("# ")) html += `<h1>${escapeHtml(trimmed.slice(2))}</h1>`;
-    else if (trimmed.startsWith("Status:")) html += `<p class="draft-status">${escapeHtml(trimmed)}</p>`;
     else if (trimmed) html += `<p>${escapeHtml(trimmed)}</p>`;
   });
   if (inList) html += "</ul>";

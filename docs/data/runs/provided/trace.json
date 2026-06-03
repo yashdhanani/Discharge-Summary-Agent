@@ -217,7 +217,7 @@
   },
   {
     "step": 9,
-    "reasoning": "All checks are complete; produce a clinician-review draft.",
+    "reasoning": "All checks are complete; produce the discharge-summary output.",
     "tool_or_action": "render_draft",
     "inputs": {
       "pages": 38,

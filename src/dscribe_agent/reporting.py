@@ -91,7 +91,7 @@ def render_quality_markdown(report: dict[str, Any]) -> str:
 
 def build_structured_summary(state: AgentState) -> dict[str, Any]:
     return {
-        "document_status": "draft_for_clinician_review",
+        "document_status": "clinical_review_required",
         "required_sections": {key: _field_to_plain(state.summary.get(key)) for key in REQUIRED_FIELDS},
         "discharge_medications": [_med_to_plain(med) for med in state.discharge_meds],
         "admission_or_inpatient_medications": [_med_to_plain(med) for med in state.admission_meds],

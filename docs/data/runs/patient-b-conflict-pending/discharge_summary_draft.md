@@ -1,7 +1,5 @@
 # Discharge Summary Draft
 
-Status: DRAFT FOR CLINICIAN REVIEW. Do not finalize without human verification.
-
 ## Required Sections
 ### Patient Demographics
 - SUPPORTED: Nisha Patel, 38-year-old female

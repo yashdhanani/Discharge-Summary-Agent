@@ -1,5 +1,5 @@
 {
-  "document_status": "draft_for_clinician_review",
+  "document_status": "clinical_review_required",
   "required_sections": {
     "patient_demographics": {
       "value": "MISSING",

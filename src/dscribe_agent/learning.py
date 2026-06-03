@@ -16,9 +16,7 @@ STRATEGIES = {
 def simulated_doctor_edit(draft: str) -> str:
     edited_lines: list[str] = []
     for line in draft.splitlines():
-        if line.startswith("Status: DRAFT"):
-            edited_lines.append(line.replace("Status: DRAFT", "Status: SAFETY-FIRST DRAFT"))
-        elif "MISSING" in line and "clinician verification required" not in line and "REVIEW" not in line:
+        if "MISSING" in line and "clinician verification required" not in line and "REVIEW" not in line:
             edited_lines.append(line + " [verify with chart]")
         elif line.startswith("- supported:") or line.startswith("- Supported:"):
             edited_lines.append(line.split(":", 1)[0].upper() + ":" + line.split(":", 1)[1])
@@ -78,6 +76,5 @@ def _apply_strategy(draft: str, strategy: str) -> str:
     if strategy == "concise":
         text = "\n".join(line for line in text.splitlines() if not line.startswith("## Evidence Notes") and " - " not in line[:80])
     elif strategy == "safety_first":
-        text = text.replace("Status: DRAFT", "Status: SAFETY-FIRST DRAFT")
         text = text.replace("MISSING", "MISSING - clinician verification required")
     return text

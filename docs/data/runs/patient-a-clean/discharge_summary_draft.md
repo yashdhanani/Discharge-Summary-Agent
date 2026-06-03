@@ -1,7 +1,5 @@
 # Discharge Summary Draft
 
-Status: DRAFT FOR CLINICIAN REVIEW. Do not finalize without human verification.
-
 ## Required Sections
 ### Patient Demographics
 - SUPPORTED: Maya Rao, 54-year-old female

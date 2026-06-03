@@ -79,7 +79,7 @@ def validate_run_folder(folder: Path) -> list[str]:
             errors.append(f"{folder.relative_to(ROOT)} extracted no discharge medications.")
 
     if structured is not None:
-        if structured.get("document_status") != "draft_for_clinician_review":
+        if structured.get("document_status") != "clinical_review_required":
             errors.append(f"{folder.relative_to(ROOT)} structured summary has wrong document status.")
         sections = structured.get("required_sections", {})
         for name, field in sections.items():
