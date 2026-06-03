@@ -4,7 +4,7 @@
     "reasoning": "Need source text before any clinical extraction; sparse PDFs require fallback rather than silent failure.",
     "tool_or_action": "ingest_pdfs",
     "inputs": {
-      "input_path": "/Users/yash/Desktop/home assignment/demo_patients/patient-b-conflict-pending"
+      "input_path": "demo_patients/patient-b-conflict-pending"
     },
     "result": "Read 1 PDF(s), 1 page(s), 1104 extracted characters.",
     "next_decision": "Continue to extract_summary_fields."

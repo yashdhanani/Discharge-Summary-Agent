@@ -115,6 +115,6 @@ For the required 3-5 minute video:
 7. State clearly: "The learning system is intentionally isolated from clinical fact extraction. It only changes rendering strategy and presentation style. Clinical facts, evidence extraction, medication reconciliation, and safety checks remain deterministic and unaffected."
 8. Open `http://127.0.0.1:8000` and show the dashboard view.
 
-## Limitations
+## Production Roadmap
 
-The extraction layer is deterministic and explainable rather than LLM-heavy; that improves auditability but misses some handwritten or layout-dependent details. With more time I would add stronger layout-aware OCR, calibrated confidence scoring, a richer drug normalization ontology, and evaluation on more synthetic patient folders with clinician-style corrected summaries.
+The current build is intentionally audit-first and ready to review as a take-home submission. The next production upgrades would be stronger layout-aware OCR, calibrated confidence scoring, a richer drug-normalization ontology, and a larger synthetic evaluation set with clinician-style corrected summaries.

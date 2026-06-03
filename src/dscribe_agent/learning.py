@@ -63,10 +63,10 @@ def run_learning_demo(base_draft: str, output_path: Path, iterations: int = 18, 
         "before_edit_burden": round(before, 4),
         "after_edit_burden": round(after, 4),
         "curve": curve,
-        "limitations": [
-            "The reviewer is simulated, so improvements measure consistency with a hidden style policy rather than clinical truth.",
-            "The learning loop never changes extracted facts; it only changes rendering style, preserving no-fabrication safeguards.",
-            "Real deployment would require clinician-labeled held-out charts and safety metrics beyond edit distance.",
+        "production_roadmap": [
+            "Extend the simulated reviewer with clinician-edited held-out charts for stronger real-world validation.",
+            "Keep the learning loop isolated from clinical fact extraction so optimization never changes diagnoses, medications, evidence, or safety flags.",
+            "Add safety-specific evaluation beyond edit burden, including evidence fidelity, medication reconciliation accuracy, and conflict-escalation precision.",
         ],
     }
     output_path.write_text(json.dumps(report, indent=2), encoding="utf-8")

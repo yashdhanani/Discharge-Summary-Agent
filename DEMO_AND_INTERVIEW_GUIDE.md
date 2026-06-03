@@ -159,10 +159,10 @@ Short version:
 I implemented a simulated doctor-edit loop with normalized edit burden as the reward. The learner uses an epsilon-greedy strategy selector over rendering policies. It improves presentation quality while preserving the Part 1 safety boundary.
 ```
 
-Important limitation:
+Production readiness note:
 
 ```text
-The reviewer is simulated, so the metric proves the feedback loop works but does not prove clinical correctness. Real deployment would need clinician-edited held-out charts and safety-specific evaluation.
+The reviewer simulation demonstrates the feedback loop. For production readiness, I would validate it with clinician-edited held-out charts and safety-specific evaluation while keeping clinical fact extraction deterministic.
 ```
 
 ## Final Repo Checklist

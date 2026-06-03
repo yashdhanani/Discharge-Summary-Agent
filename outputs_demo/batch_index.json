@@ -1,7 +1,7 @@
 [
   {
-    "input": "/Users/yash/Desktop/home assignment/demo_patients/patient-a-clean",
-    "output": "/Users/yash/Desktop/home assignment/outputs_demo/patient-a-clean",
+    "input": "demo_patients/patient-a-clean",
+    "output": "outputs_demo/patient-a-clean",
     "quality": {
       "missing": [],
       "uncertain": [],
@@ -15,8 +15,8 @@
     }
   },
   {
-    "input": "/Users/yash/Desktop/home assignment/demo_patients/patient-b-conflict-pending",
-    "output": "/Users/yash/Desktop/home assignment/outputs_demo/patient-b-conflict-pending",
+    "input": "demo_patients/patient-b-conflict-pending",
+    "output": "outputs_demo/patient-b-conflict-pending",
     "quality": {
       "missing": [
         "discharge_date",

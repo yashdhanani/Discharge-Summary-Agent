@@ -56,7 +56,7 @@ outputs_demo/patient-b-conflict-pending/*
 | Simulated doctor edits | Complete | `simulated_doctor_edit` applies a hidden reviewer style policy. |
 | Learning mechanism | Complete | `run_learning_demo` uses epsilon-greedy strategy selection over rendering strategies. |
 | Before/after metrics and curve | Complete | `learning_metrics.json` stores before/after edit burden, best strategy, and iteration curve. |
-| Safety limitations discussed | Complete | `README.md` and `PROJECT_STRUCTURE.md` explain that learning only changes presentation style, not clinical facts. |
+| Safety boundary explained | Complete | `README.md` and `PROJECT_STRUCTURE.md` explain that learning only changes presentation style, not clinical facts. |
 
 Critical safety statement for the video:
 
